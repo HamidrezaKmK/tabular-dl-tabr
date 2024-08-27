@@ -142,7 +142,7 @@ def main(
         timeout = C.timeout
         study = optuna.create_study(
             direction='maximize',
-            sampler=optuna.samplers.TPESampler(**C.sampler, seed=C.seed),
+            sampler=optuna.samplers.RandomSampler(**C.sampler, seed=C.seed), # change to random sampler for consistency with TabZilla
         )
         trial_reports = []
         timer = delu.Timer()
@@ -182,6 +182,7 @@ def main(
     warnings.filterwarnings('ignore', category=optuna.exceptions.ExperimentalWarning)
     # ignore the warnings about the deprecated suggest_* methods
     warnings.filterwarnings('ignore', category=FutureWarning)
+
     study.optimize(
         objective,
         n_trials=n_trials,
