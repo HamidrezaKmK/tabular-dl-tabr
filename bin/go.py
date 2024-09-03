@@ -21,9 +21,9 @@ import lib
 def main(
     path: Path,  # "a/b/c/0-tuning" OR "a/b/c/0-evaluation"
     function: Optional[str] = None,
-    n_seeds: int = 15,
-    n_ensembles: int = 3,
-    ensemble_size: int = 5,
+    n_seeds: int = 1,
+    n_ensembles: int = 1,
+    ensemble_size: int = 1,
     *,
     continue_: bool = False,
     force: bool = False,
