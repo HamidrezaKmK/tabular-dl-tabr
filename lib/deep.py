@@ -48,7 +48,7 @@ class OneHotEncoder(nn.Module):
             for column, cardinality in zip(range(x.shape[-1]), self.cardinalities)
         ]
 
-        return torch.cat(encoded_columns, -1)
+        return torch.cat(encoded_columns, -1).float()
 
 
 class CLSEmbedding(nn.Module):
