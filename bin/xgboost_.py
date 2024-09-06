@@ -44,7 +44,7 @@ class Config:
         if isinstance(self.data, dict):
             assert self.data['cat_policy'] in [None, 'one-hot']
         assert (
-            'early_stopping_rounds' in self.fit
+            'early_stopping_rounds' in self.model
         ), 'XGBoost does not automatically use the best model, so early stopping must be used'
         use_gpu = self.model.get('tree_method') == 'gpu_hist'
         if use_gpu:
@@ -118,17 +118,18 @@ def main(
     if dataset.is_regression:
         model = XGBRegressor(**C.model, **model_extra_kwargs)
         predict = model.predict
-        fit_extra_kwargs = {}
     else:
-        model = XGBClassifier(
-            **C.model, **model_extra_kwargs, disable_default_eval_metric=True
-        )
         if dataset.is_multiclass:
+            model = XGBClassifier(
+                **C.model, **model_extra_kwargs, disable_default_eval_metric=True, eval_metric='merror'
+            )
             predict = model.predict_proba
-            fit_extra_kwargs = {'eval_metric': 'merror'}
         else:
+            model = XGBClassifier(
+                **C.model, **model_extra_kwargs, disable_default_eval_metric=True, eval_metric='error'
+            )
             predict = lambda x: model.predict_proba(x)[:, 1]  # type: ignore[code]  # noqa
-            fit_extra_kwargs = {'eval_metric': 'error'}
+        
     report['prediction_type'] = None if dataset.is_regression else 'probs'
 
     # >>> training
@@ -139,7 +140,6 @@ def main(
             dataset.Y['train'],
             eval_set=[(dataset.X_num['val'], dataset.Y['val'])],
             **C.fit,
-            **fit_extra_kwargs,
         )
     report['time'] = str(timer)
     report['best_iteration'] = model.best_iteration
