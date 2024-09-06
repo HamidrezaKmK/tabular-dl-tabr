@@ -1,0 +1,213 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.tabr_scaling.main",
+        "n_trials": 30,
+        "timeout": null,
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/TabZilla-OpenML-diabetes-37",
+                "y_policy": null
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": [
+                    "_tune_",
+                    "int",
+                    96,
+                    384
+                ],
+                "context_dropout": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            }
+        }
+    },
+    "best": {
+        "function": "bin.tabr_scaling.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/TabZilla-OpenML-diabetes-37",
+                "y_policy": null
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": 353,
+                "context_dropout": 0.5781976563006176,
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": 0.2300649112954666,
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.00038322168504927853,
+                "weight_decay": 7.098936257405907e-05
+            }
+        },
+        "n_parameters": 1129248,
+        "prediction_type": "logits",
+        "best_epoch": 3,
+        "metrics": {
+            "train": {
+                "0": {
+                    "precision": 0.8295165394402035,
+                    "recall": 0.815,
+                    "f1-score": 0.8221941992433796,
+                    "support": 400.0
+                },
+                "1": {
+                    "precision": 0.665158371040724,
+                    "recall": 0.6869158878504673,
+                    "f1-score": 0.6758620689655173,
+                    "support": 214.0
+                },
+                "accuracy": 0.7703583061889251,
+                "macro avg": {
+                    "precision": 0.7473374552404637,
+                    "recall": 0.7509579439252336,
+                    "f1-score": 0.7490281341044485,
+                    "support": 614.0
+                },
+                "weighted avg": {
+                    "precision": 0.7722320963824044,
+                    "recall": 0.7703583061889251,
+                    "f1-score": 0.771192446996698,
+                    "support": 614.0
+                },
+                "cross-entropy": 0.47172860212490575,
+                "roc-auc": 0.8405490654205607,
+                "score": 0.7703583061889251
+            },
+            "val": {
+                "0": {
+                    "precision": 0.7884615384615384,
+                    "recall": 0.82,
+                    "f1-score": 0.803921568627451,
+                    "support": 50.0
+                },
+                "1": {
+                    "precision": 0.64,
+                    "recall": 0.5925925925925926,
+                    "f1-score": 0.6153846153846154,
+                    "support": 27.0
+                },
+                "accuracy": 0.7402597402597403,
+                "macro avg": {
+                    "precision": 0.7142307692307692,
+                    "recall": 0.7062962962962962,
+                    "f1-score": 0.7096530920060332,
+                    "support": 77.0
+                },
+                "weighted avg": {
+                    "precision": 0.7364035964035964,
+                    "recall": 0.7402597402597403,
+                    "f1-score": 0.7378112083994437,
+                    "support": 77.0
+                },
+                "cross-entropy": 0.5629409002186336,
+                "roc-auc": 0.7792592592592593,
+                "score": 0.7402597402597403
+            },
+            "test": {
+                "0": {
+                    "precision": 0.8958333333333334,
+                    "recall": 0.86,
+                    "f1-score": 0.8775510204081632,
+                    "support": 50.0
+                },
+                "1": {
+                    "precision": 0.7586206896551724,
+                    "recall": 0.8148148148148148,
+                    "f1-score": 0.7857142857142857,
+                    "support": 27.0
+                },
+                "accuracy": 0.8441558441558441,
+                "macro avg": {
+                    "precision": 0.8272270114942528,
+                    "recall": 0.8374074074074074,
+                    "f1-score": 0.8316326530612245,
+                    "support": 77.0
+                },
+                "weighted avg": {
+                    "precision": 0.8477198089267055,
+                    "recall": 0.8441558441558441,
+                    "f1-score": 0.8453485290219985,
+                    "support": 77.0
+                },
+                "cross-entropy": 0.39610487460694654,
+                "roc-auc": 0.8948148148148147,
+                "score": 0.8441558441558441
+            }
+        },
+        "time": "0:00:00.660703",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 1,
+        "tuning_time": "0:00:02.618056"
+    },
+    "time": "0:00:29.851396",
+    "n_completed_trials": 30
+}

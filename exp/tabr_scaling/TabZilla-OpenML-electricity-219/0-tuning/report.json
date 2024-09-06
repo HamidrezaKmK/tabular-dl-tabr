@@ -1,0 +1,213 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.tabr_scaling.main",
+        "n_trials": 30,
+        "timeout": null,
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/TabZilla-OpenML-electricity-219",
+                "y_policy": null
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": [
+                    "_tune_",
+                    "int",
+                    96,
+                    384
+                ],
+                "context_dropout": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            }
+        }
+    },
+    "best": {
+        "function": "bin.tabr_scaling.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/TabZilla-OpenML-electricity-219",
+                "y_policy": null
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": 182,
+                "context_dropout": 0.34197894642075893,
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": 0.3545236567489039,
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.00014081551171078602,
+                "weight_decay": 0.0
+            }
+        },
+        "n_parameters": 303213,
+        "prediction_type": "logits",
+        "best_epoch": 227,
+        "metrics": {
+            "train": {
+                "0": {
+                    "precision": 0.9834857968223399,
+                    "recall": 0.9792895153171293,
+                    "f1-score": 0.981383170386029,
+                    "support": 20859.0
+                },
+                "1": {
+                    "precision": 0.9720894172373692,
+                    "recall": 0.9777113522646046,
+                    "f1-score": 0.9748922797809959,
+                    "support": 15389.0
+                },
+                "accuracy": 0.9786195100419334,
+                "macro avg": {
+                    "precision": 0.9777876070298546,
+                    "recall": 0.9785004337908669,
+                    "f1-score": 0.9781377250835124,
+                    "support": 36248.0
+                },
+                "weighted avg": {
+                    "precision": 0.9786474916625211,
+                    "recall": 0.9786195100419334,
+                    "f1-score": 0.9786274786093557,
+                    "support": 36248.0
+                },
+                "cross-entropy": 0.056106629577701704,
+                "roc-auc": 0.9982048519499045,
+                "score": 0.9786195100419334
+            },
+            "val": {
+                "0": {
+                    "precision": 0.9722650231124808,
+                    "recall": 0.9677914110429447,
+                    "f1-score": 0.9700230591852421,
+                    "support": 2608.0
+                },
+                "1": {
+                    "precision": 0.9566115702479339,
+                    "recall": 0.9625779625779626,
+                    "f1-score": 0.9595854922279793,
+                    "support": 1924.0
+                },
+                "accuracy": 0.9655781112091791,
+                "macro avg": {
+                    "precision": 0.9644382966802073,
+                    "recall": 0.9651846868104537,
+                    "f1-score": 0.9648042757066106,
+                    "support": 4532.0
+                },
+                "weighted avg": {
+                    "precision": 0.9656195590102327,
+                    "recall": 0.9655781112091791,
+                    "f1-score": 0.9655919297002964,
+                    "support": 4532.0
+                },
+                "cross-entropy": 0.09558355812118519,
+                "roc-auc": 0.9942831428644312,
+                "score": 0.9655781112091791
+            },
+            "test": {
+                "0": {
+                    "precision": 0.9680769230769231,
+                    "recall": 0.9651073619631901,
+                    "f1-score": 0.966589861751152,
+                    "support": 2608.0
+                },
+                "1": {
+                    "precision": 0.9528985507246377,
+                    "recall": 0.9568607068607069,
+                    "f1-score": 0.9548755186721992,
+                    "support": 1924.0
+                },
+                "accuracy": 0.9616063548102383,
+                "macro avg": {
+                    "precision": 0.9604877369007804,
+                    "recall": 0.9609840344119485,
+                    "f1-score": 0.9607326902116756,
+                    "support": 4532.0
+                },
+                "weighted avg": {
+                    "precision": 0.9616331480535786,
+                    "recall": 0.9616063548102383,
+                    "f1-score": 0.9616166940362567,
+                    "support": 4532.0
+                },
+                "cross-entropy": 0.10380888517633631,
+                "roc-auc": 0.9936333550693213,
+                "score": 0.9616063548102383
+            }
+        },
+        "time": "0:02:39.139897",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 20,
+        "tuning_time": "0:41:21.735901"
+    },
+    "time": "1:03:05.913416",
+    "n_completed_trials": 30
+}

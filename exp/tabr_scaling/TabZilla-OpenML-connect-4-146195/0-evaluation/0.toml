@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+context_size = 96
+
+[data]
+seed = 0
+cache = true
+num_policy = "__null__"
+cat_policy = "__null__"
+path = ":data/TabZilla-OpenML-connect-4-146195"
+y_policy = "__null__"
+
+[model]
+num_embeddings = "__null__"
+d_main = 346
+context_dropout = 0.0974957608058249
+d_multiplier = 2.0
+encoder_n_blocks = 0
+predictor_n_blocks = 1
+mixer_normalization = "auto"
+dropout0 = 0.3693357385703065
+dropout1 = 0.0
+normalization = "LayerNorm"
+activation = "ReLU"
+
+[optimizer]
+type = "AdamW"
+lr = 1.7686421290636623e-05
+weight_decay = 0.0

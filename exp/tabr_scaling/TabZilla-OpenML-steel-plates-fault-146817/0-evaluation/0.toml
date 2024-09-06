@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+context_size = 96
+
+[data]
+seed = 0
+cache = true
+num_policy = "quantile"
+cat_policy = "__null__"
+path = ":data/TabZilla-OpenML-steel-plates-fault-146817"
+y_policy = "__null__"
+
+[model]
+num_embeddings = "__null__"
+d_main = 291
+context_dropout = 0.1620047839152989
+d_multiplier = 2.0
+encoder_n_blocks = 0
+predictor_n_blocks = 1
+mixer_normalization = "auto"
+dropout0 = 0.44111641327355694
+dropout1 = 0.0
+normalization = "LayerNorm"
+activation = "ReLU"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0008401891913442231
+weight_decay = 1.5278610607077096e-05
