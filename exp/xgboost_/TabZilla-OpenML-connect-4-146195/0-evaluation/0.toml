@@ -1,0 +1,28 @@
+seed = 0
+neighbors = "__null__"
+
+[data]
+seed = 0
+num_policy = "__null__"
+cache = true
+cat_policy = "one-hot"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-connect-4-146195"
+
+[model]
+booster = "gbtree"
+early_stopping_rounds = 200
+n_estimators = 4000
+n_jobs = 1
+tree_method = "gpu_hist"
+use_label_encoder = false
+colsample_byree = 0.5823470782489564
+gamma = 0
+lambda = 1.6901759275038954
+learning_rate = 0.04044812636651483
+max_depth = 10
+min_child_weight = 2.4028805225920222
+subsample = 0.6559724977398009
+
+[fit]
+verbose = true
