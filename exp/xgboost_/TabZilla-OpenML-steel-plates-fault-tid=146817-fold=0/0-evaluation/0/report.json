@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-steel-plates-fault-146817"
+            "path": ":data/TabZilla-OpenML-steel-plates-fault-tid=146817-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:10.580524",
+    "time": "0:00:44.443412",
     "best_iteration": 78,
     "metrics": {
         "train": {
@@ -94,6 +94,10 @@
                 "support": 1552.0
             },
             "cross-entropy": 0.1380462613384817,
+            "roc-auc": 0.9999953065641842,
+            "f1-weighted": 0.9954966638982503,
+            "f1-macro": 0.997517645953893,
+            "f1-micro": 0.9954896907216495,
             "score": 0.9954896907216495
         },
         "val": {
@@ -153,6 +157,10 @@
                 "support": 194.0
             },
             "cross-entropy": 0.5405270335183682,
+            "roc-auc": 0.9690549180482835,
+            "f1-weighted": 0.8234314346554799,
+            "f1-macro": 0.8430966439014728,
+            "f1-micro": 0.8247422680412371,
             "score": 0.8247422680412371
         },
         "test": {
@@ -212,6 +220,10 @@
                 "support": 195.0
             },
             "cross-entropy": 0.5523845634270307,
+            "roc-auc": 0.9673408183158114,
+            "f1-weighted": 0.7744927527197284,
+            "f1-macro": 0.7711997375355951,
+            "f1-micro": 0.7743589743589744,
             "score": 0.7743589743589744
         }
     }

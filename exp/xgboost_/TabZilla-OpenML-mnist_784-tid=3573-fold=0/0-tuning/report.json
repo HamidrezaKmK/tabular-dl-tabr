@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-mnist_784-3573"
+                "path": ":data/TabZilla-OpenML-mnist_784-tid=3573-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-mnist_784-3573"
+                "path": ":data/TabZilla-OpenML-mnist_784-tid=3573-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:02:49.156216",
+        "time": "0:04:11.052202",
         "best_iteration": 2174,
         "metrics": {
             "train": {
@@ -190,6 +190,10 @@
                     "support": 56000.0
                 },
                 "cross-entropy": 4.8903520045891105e-05,
+                "roc-auc": 1.0,
+                "f1-weighted": 1.0,
+                "f1-macro": 1.0,
+                "f1-micro": 1.0,
                 "score": 1.0
             },
             "val": {
@@ -267,6 +271,10 @@
                     "support": 7000.0
                 },
                 "cross-entropy": 0.06698650072287016,
+                "roc-auc": 0.999646591703237,
+                "f1-weighted": 0.9831422828523655,
+                "f1-macro": 0.9829816793271732,
+                "f1-micro": 0.9831428571428571,
                 "score": 0.9831428571428571
             },
             "test": {
@@ -344,12 +352,16 @@
                     "support": 7000.0
                 },
                 "cross-entropy": 0.07328906208867922,
+                "roc-auc": 0.9997256578878789,
+                "f1-weighted": 0.9825669905806569,
+                "f1-macro": 0.9824930691313597,
+                "f1-micro": 0.9825714285714285,
                 "score": 0.9825714285714285
             }
         },
         "trial_id": 19,
-        "tuning_time": "1:32:01.774624"
+        "tuning_time": "2:35:08.200621"
     },
-    "time": "2:24:01.815632",
-    "n_completed_trials": 29
+    "time": "4:00:19.900366",
+    "n_completed_trials": 30
 }

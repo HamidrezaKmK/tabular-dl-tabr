@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-satimage-2074",
+    "data": ":data/TabZilla-OpenML-satimage-tid=2074-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -60,6 +60,10 @@
                 "support": 5144.0
             },
             "cross-entropy": 4.091912748591047e-07,
+            "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -113,6 +117,10 @@
                 "support": 643.0
             },
             "cross-entropy": 0.344879436692842,
+            "roc-auc": 0.992500877290419,
+            "f1-weighted": 0.9493628147039241,
+            "f1-macro": 0.9388251635091504,
+            "f1-micro": 0.9502332814930016,
             "score": 0.9502332814930016
         },
         "test": {
@@ -166,6 +174,10 @@
                 "support": 643.0
             },
             "cross-entropy": 0.43531972387142936,
+            "roc-auc": 0.9912936289541764,
+            "f1-weighted": 0.9258483576955916,
+            "f1-macro": 0.9128497243330945,
+            "f1-micro": 0.9284603421461898,
             "score": 0.9284603421461898
         }
     }

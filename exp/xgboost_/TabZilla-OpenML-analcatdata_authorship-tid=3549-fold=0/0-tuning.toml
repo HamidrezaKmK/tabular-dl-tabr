@@ -14,7 +14,7 @@ num_policy = "quantile"
 cache = true
 cat_policy = "__null__"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-analcatdata_authorship-3549"
+path = ":data/TabZilla-OpenML-analcatdata_authorship-tid=3549-fold=0"
 
 [space.model]
 booster = "gbtree"

@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-MiceProtein-146800",
+    "data": ":data/TabZilla-OpenML-MiceProtein-tid=146800-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -72,6 +72,10 @@
                 "support": 864.0
             },
             "cross-entropy": 0.0046001151910056715,
+            "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -137,6 +141,10 @@
                 "support": 108.0
             },
             "cross-entropy": 0.05242521169706537,
+            "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "test": {
@@ -202,6 +210,10 @@
                 "support": 108.0
             },
             "cross-entropy": 0.108086442980119,
+            "roc-auc": 0.9995608756323042,
+            "f1-weighted": 0.9725524877185158,
+            "f1-macro": 0.9737981207808795,
+            "f1-micro": 0.9722222222222222,
             "score": 0.9722222222222222
         }
     }

@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-blood-transfusion-service-center-10101"
+                "path": ":data/TabZilla-OpenML-blood-transfusion-service-center-tid=10101-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-blood-transfusion-service-center-10101"
+                "path": ":data/TabZilla-OpenML-blood-transfusion-service-center-tid=10101-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:00:07.795161",
+        "time": "0:00:01.354915",
         "best_iteration": 192,
         "metrics": {
             "train": {
@@ -143,6 +143,9 @@
                 },
                 "cross-entropy": 0.4260087074082475,
                 "roc-auc": 0.8555102545095132,
+                "f1-weighted": 0.7816465816771794,
+                "f1-macro": 0.6616046257999465,
+                "f1-micro": 0.8160535117056856,
                 "score": 0.8160535117056856
             },
             "val": {
@@ -173,6 +176,9 @@
                 },
                 "cross-entropy": 0.4308219746889737,
                 "roc-auc": 0.8484405458089669,
+                "f1-weighted": 0.815682382133995,
+                "f1-macro": 0.7208436724565757,
+                "f1-micro": 0.84,
                 "score": 0.84
             },
             "test": {
@@ -203,12 +209,15 @@
                 },
                 "cross-entropy": 0.48820634755036196,
                 "roc-auc": 0.7519493177387915,
+                "f1-weighted": 0.70208,
+                "f1-macro": 0.544,
+                "f1-micro": 0.7466666666666667,
                 "score": 0.7466666666666667
             }
         },
         "trial_id": 7,
-        "tuning_time": "0:00:36.639559"
+        "tuning_time": "0:00:07.013481"
     },
-    "time": "0:02:58.930167",
+    "time": "0:01:08.048579",
     "n_completed_trials": 30
 }

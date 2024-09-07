@@ -14,7 +14,7 @@ num_policy = "quantile"
 cache = true
 cat_policy = "one-hot"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-credit-approval-29"
+path = ":data/TabZilla-OpenML-credit-approval-tid=29-fold=0"
 
 [space.model]
 booster = "gbtree"

@@ -14,7 +14,7 @@ num_policy = "__null__"
 cache = true
 cat_policy = "one-hot"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-connect-4-146195"
+path = ":data/TabZilla-OpenML-connect-4-tid=146195-fold=0"
 
 [space.model]
 booster = "gbtree"

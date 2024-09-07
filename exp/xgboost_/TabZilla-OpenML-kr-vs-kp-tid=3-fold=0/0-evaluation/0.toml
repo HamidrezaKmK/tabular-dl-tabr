@@ -7,7 +7,7 @@ num_policy = "__null__"
 cache = true
 cat_policy = "one-hot"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-kr-vs-kp-3"
+path = ":data/TabZilla-OpenML-kr-vs-kp-tid=3-fold=0"
 
 [model]
 booster = "gbtree"

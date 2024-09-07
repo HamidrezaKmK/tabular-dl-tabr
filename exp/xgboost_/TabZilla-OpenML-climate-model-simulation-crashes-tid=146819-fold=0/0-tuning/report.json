@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-climate-model-simulation-crashes-146819"
+                "path": ":data/TabZilla-OpenML-climate-model-simulation-crashes-tid=146819-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-climate-model-simulation-crashes-146819"
+                "path": ":data/TabZilla-OpenML-climate-model-simulation-crashes-tid=146819-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:00:35.746407",
+        "time": "0:00:03.674509",
         "best_iteration": 282,
         "metrics": {
             "train": {
@@ -143,6 +143,9 @@
                 },
                 "cross-entropy": 0.06825559516419087,
                 "roc-auc": 0.9999332086561582,
+                "f1-weighted": 0.9830457063571638,
+                "f1-macro": 0.9448728465955701,
+                "f1-micro": 0.9837962962962963,
                 "score": 0.9837962962962963
             },
             "val": {
@@ -173,6 +176,9 @@
                 },
                 "cross-entropy": 0.09638202379155449,
                 "roc-auc": 0.99,
+                "f1-weighted": 0.9802504059929803,
+                "f1-macro": 0.9236209335219236,
+                "f1-micro": 0.9814814814814815,
                 "score": 0.9814814814814815
             },
             "test": {
@@ -203,12 +209,15 @@
                 },
                 "cross-entropy": 0.16117451069905492,
                 "roc-auc": 0.79,
+                "f1-weighted": 0.9802504059929803,
+                "f1-macro": 0.9236209335219236,
+                "f1-micro": 0.9814814814814815,
                 "score": 0.9814814814814815
             }
         },
         "trial_id": 17,
-        "tuning_time": "0:05:36.377237"
+        "tuning_time": "0:00:35.858033"
     },
-    "time": "0:09:18.205043",
+    "time": "0:01:04.223440",
     "n_completed_trials": 30
 }

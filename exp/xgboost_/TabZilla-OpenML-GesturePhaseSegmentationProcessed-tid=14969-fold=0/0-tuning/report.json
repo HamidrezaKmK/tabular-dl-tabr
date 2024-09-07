@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-GesturePhaseSegmentationProcessed-14969"
+                "path": ":data/TabZilla-OpenML-GesturePhaseSegmentationProcessed-tid=14969-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-GesturePhaseSegmentationProcessed-14969"
+                "path": ":data/TabZilla-OpenML-GesturePhaseSegmentationProcessed-tid=14969-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:00:44.961324",
+        "time": "0:00:22.219470",
         "best_iteration": 187,
         "metrics": {
             "train": {
@@ -160,6 +160,10 @@
                     "support": 7897.0
                 },
                 "cross-entropy": 7.434244027895187e-07,
+                "roc-auc": 1.0,
+                "f1-weighted": 1.0,
+                "f1-macro": 1.0,
+                "f1-micro": 1.0,
                 "score": 1.0
             },
             "val": {
@@ -207,6 +211,10 @@
                     "support": 988.0
                 },
                 "cross-entropy": 1.2241068007749265,
+                "roc-auc": 0.9105539762080689,
+                "f1-weighted": 0.7351075583256288,
+                "f1-macro": 0.7030883051842672,
+                "f1-micro": 0.7419028340080972,
                 "score": 0.7419028340080972
             },
             "test": {
@@ -254,12 +262,16 @@
                     "support": 988.0
                 },
                 "cross-entropy": 1.2708542596588543,
+                "roc-auc": 0.9145161172743229,
+                "f1-weighted": 0.7119885207407094,
+                "f1-macro": 0.6823260821598113,
+                "f1-micro": 0.72165991902834,
                 "score": 0.72165991902834
             }
         },
         "trial_id": 28,
-        "tuning_time": "0:37:51.720246"
+        "tuning_time": "0:21:28.149651"
     },
-    "time": "0:38:02.051510",
+    "time": "0:21:56.552023",
     "n_completed_trials": 30
 }

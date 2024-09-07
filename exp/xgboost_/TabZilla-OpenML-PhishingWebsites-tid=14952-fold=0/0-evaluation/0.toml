@@ -7,7 +7,7 @@ num_policy = "__null__"
 cache = true
 cat_policy = "one-hot"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-PhishingWebsites-14952"
+path = ":data/TabZilla-OpenML-PhishingWebsites-tid=14952-fold=0"
 
 [model]
 booster = "gbtree"

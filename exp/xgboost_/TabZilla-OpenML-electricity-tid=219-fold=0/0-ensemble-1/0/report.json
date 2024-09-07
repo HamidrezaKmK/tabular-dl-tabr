@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-electricity-219",
+    "data": ":data/TabZilla-OpenML-electricity-tid=219-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.029560386733651554,
             "roc-auc": 0.999999495325768,
+            "f1-weighted": 0.9997792981681748,
+            "f1-macro": 0.999774155165912,
+            "f1-micro": 0.9997792981681748,
             "score": 0.9997792981681748
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.15447667167151016,
             "roc-auc": 0.984778165376325,
+            "f1-weighted": 0.9430792043433174,
+            "f1-macro": 0.94176032783201,
+            "f1-micro": 0.9430714916151809,
             "score": 0.9430714916151809
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.15691511313117595,
             "roc-auc": 0.9842958815351454,
+            "f1-weighted": 0.9393265635337004,
+            "f1-macro": 0.9379186215393542,
+            "f1-micro": 0.9393203883495146,
             "score": 0.9393203883495146
         }
     }

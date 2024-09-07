@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": "one-hot",
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-sick-3021"
+                "path": ":data/TabZilla-OpenML-sick-tid=3021-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": "one-hot",
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-sick-3021"
+                "path": ":data/TabZilla-OpenML-sick-tid=3021-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:00:00.405043",
+        "time": "0:00:02.414638",
         "best_iteration": 33,
         "metrics": {
             "train": {
@@ -143,6 +143,9 @@
                 },
                 "cross-entropy": 0.02070794615923714,
                 "roc-auc": 1.0,
+                "f1-weighted": 1.0,
+                "f1-macro": 1.0,
+                "f1-micro": 1.0,
                 "score": 1.0
             },
             "val": {
@@ -173,6 +176,9 @@
                 },
                 "cross-entropy": 0.03798714171173983,
                 "roc-auc": 0.9979990583804143,
+                "f1-weighted": 0.9947089947089947,
+                "f1-macro": 0.9777542372881356,
+                "f1-micro": 0.9947089947089947,
                 "score": 0.9947089947089947
             },
             "test": {
@@ -203,12 +209,15 @@
                 },
                 "cross-entropy": 0.04280706242639563,
                 "roc-auc": 0.9616656460502143,
+                "f1-weighted": 0.9918033338562385,
+                "f1-macro": 0.9630124922534982,
+                "f1-micro": 0.9920634920634921,
                 "score": 0.9920634920634921
             }
         },
         "trial_id": 3,
-        "tuning_time": "0:00:02.196081"
+        "tuning_time": "0:00:10.277586"
     },
-    "time": "0:00:54.315388",
+    "time": "0:01:46.884906",
     "n_completed_trials": 30
 }

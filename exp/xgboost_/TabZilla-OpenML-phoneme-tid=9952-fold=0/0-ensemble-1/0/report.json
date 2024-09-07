@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-phoneme-9952",
+    "data": ":data/TabZilla-OpenML-phoneme-tid=9952-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.19577172509292984,
             "roc-auc": 0.9906816627725132,
+            "f1-weighted": 0.9535579326834209,
+            "f1-macro": 0.9435319591615519,
+            "f1-micro": 0.9539565016196205,
             "score": 0.9539565016196205
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.26565360757030465,
             "roc-auc": 0.9603378445124964,
+            "f1-weighted": 0.9244191757256373,
+            "f1-macro": 0.909198832492089,
+            "f1-micro": 0.9242144177449169,
             "score": 0.9242144177449169
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.2760156883585247,
             "roc-auc": 0.9530606868846522,
+            "f1-weighted": 0.8906366584739968,
+            "f1-macro": 0.8678876678876679,
+            "f1-micro": 0.8909426987060998,
             "score": 0.8909426987060998
         }
     }

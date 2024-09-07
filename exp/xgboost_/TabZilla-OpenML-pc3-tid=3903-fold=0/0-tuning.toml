@@ -14,7 +14,7 @@ num_policy = "quantile"
 cache = true
 cat_policy = "__null__"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-pc3-3903"
+path = ":data/TabZilla-OpenML-pc3-tid=3903-fold=0"
 
 [space.model]
 booster = "gbtree"

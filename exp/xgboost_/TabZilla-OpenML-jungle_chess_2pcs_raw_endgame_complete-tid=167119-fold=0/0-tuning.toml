@@ -14,7 +14,7 @@ num_policy = "quantile"
 cache = true
 cat_policy = "__null__"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-jungle_chess_2pcs_raw_endgame_complete-167119"
+path = ":data/TabZilla-OpenML-jungle_chess_2pcs_raw_endgame_complete-tid=167119-fold=0"
 
 [space.model]
 booster = "gbtree"

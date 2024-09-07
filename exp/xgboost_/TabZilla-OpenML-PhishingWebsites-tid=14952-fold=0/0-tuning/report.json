@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": "one-hot",
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-PhishingWebsites-14952"
+                "path": ":data/TabZilla-OpenML-PhishingWebsites-tid=14952-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": "one-hot",
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-PhishingWebsites-14952"
+                "path": ":data/TabZilla-OpenML-PhishingWebsites-tid=14952-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:00:07.097490",
+        "time": "0:00:02.051632",
         "best_iteration": 63,
         "metrics": {
             "train": {
@@ -143,6 +143,9 @@
                 },
                 "cross-entropy": 0.05509592375738419,
                 "roc-auc": 0.9990410522306262,
+                "f1-weighted": 0.9834831060158975,
+                "f1-macro": 0.9832595553508616,
+                "f1-micro": 0.9834897659165441,
                 "score": 0.9834897659165441
             },
             "val": {
@@ -173,6 +176,9 @@
                 },
                 "cross-entropy": 0.07498866236807701,
                 "roc-auc": 0.9973280545984629,
+                "f1-weighted": 0.9774073368276093,
+                "f1-macro": 0.9771221956072961,
+                "f1-micro": 0.9773960216998192,
                 "score": 0.9773960216998192
             },
             "test": {
@@ -203,12 +209,15 @@
                 },
                 "cross-entropy": 0.09801344170299515,
                 "roc-auc": 0.9934783328915981,
+                "f1-weighted": 0.960172088184162,
+                "f1-macro": 0.9596062220894135,
+                "f1-micro": 0.9602169981916817,
                 "score": 0.9602169981916817
             }
         },
         "trial_id": 3,
-        "tuning_time": "0:00:52.293090"
+        "tuning_time": "0:00:15.144781"
     },
-    "time": "0:10:26.640466",
+    "time": "0:03:22.403222",
     "n_completed_trials": 30
 }

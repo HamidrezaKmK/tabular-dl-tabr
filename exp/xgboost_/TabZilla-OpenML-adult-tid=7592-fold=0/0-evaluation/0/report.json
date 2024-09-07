@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": "one-hot",
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-adult-7592"
+            "path": ":data/TabZilla-OpenML-adult-tid=7592-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:04.133128",
+    "time": "0:00:04.359660",
     "best_iteration": 99,
     "metrics": {
         "train": {
@@ -65,6 +65,9 @@
             },
             "cross-entropy": 0.2493045892201769,
             "roc-auc": 0.9454486805033879,
+            "f1-weighted": 0.8812245603588275,
+            "f1-macro": 0.8320434419333287,
+            "f1-micro": 0.8850071662571662,
             "score": 0.8850071662571662
         },
         "val": {
@@ -95,6 +98,9 @@
             },
             "cross-entropy": 0.2820335194505375,
             "roc-auc": 0.9234660004917123,
+            "f1-weighted": 0.8727106763006014,
+            "f1-macro": 0.8200172395474533,
+            "f1-micro": 0.8767656090071648,
             "score": 0.8767656090071648
         },
         "test": {
@@ -125,6 +131,9 @@
             },
             "cross-entropy": 0.27668078768651677,
             "roc-auc": 0.9295366670933083,
+            "f1-weighted": 0.8685128108749508,
+            "f1-macro": 0.8136315818750975,
+            "f1-micro": 0.8730808597748209,
             "score": 0.8730808597748209
         }
     }

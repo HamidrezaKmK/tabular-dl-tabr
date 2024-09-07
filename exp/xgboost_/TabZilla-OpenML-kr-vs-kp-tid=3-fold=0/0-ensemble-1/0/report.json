@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-kr-vs-kp-3",
+    "data": ":data/TabZilla-OpenML-kr-vs-kp-tid=3-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.6398767068622921,
             "roc-auc": 0.9999987730324809,
+            "f1-weighted": 0.9937382209534846,
+            "f1-macro": 0.9937239842141997,
+            "f1-micro": 0.9937402190923318,
             "score": 0.9937402190923318
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.6408391230932848,
             "roc-auc": 0.9998825877656451,
+            "f1-weighted": 0.9968745412282848,
+            "f1-macro": 0.996868118424272,
+            "f1-micro": 0.996875,
             "score": 0.996875
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.6405512189537488,
             "roc-auc": 0.9999021564713709,
+            "f1-weighted": 0.9812279411764706,
+            "f1-macro": 0.9811764705882353,
+            "f1-micro": 0.98125,
             "score": 0.98125
         }
     }

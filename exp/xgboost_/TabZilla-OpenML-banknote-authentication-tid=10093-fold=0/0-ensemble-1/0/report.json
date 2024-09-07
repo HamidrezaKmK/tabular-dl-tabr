@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-banknote-authentication-10093",
+    "data": ":data/TabZilla-OpenML-banknote-authentication-tid=10093-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.004233539020853404,
             "roc-auc": 0.9999999999999999,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.012063892535027078,
             "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.03180666425080925,
             "roc-auc": 0.9997870981477538,
+            "f1-weighted": 0.9855287763588495,
+            "f1-macro": 0.9853565365025467,
+            "f1-micro": 0.9855072463768116,
             "score": 0.9855072463768116
         }
     }

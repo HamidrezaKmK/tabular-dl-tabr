@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-mfeat-karhunen-16"
+            "path": ":data/TabZilla-OpenML-mfeat-karhunen-tid=16-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:16.724954",
+    "time": "0:00:28.527819",
     "best_iteration": 151,
     "metrics": {
         "train": {
@@ -112,6 +112,10 @@
                 "support": 1600.0
             },
             "cross-entropy": 0.009252451126873807,
+            "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -189,6 +193,10 @@
                 "support": 200.0
             },
             "cross-entropy": 0.2034829445890513,
+            "roc-auc": 0.9970555555555556,
+            "f1-weighted": 0.9548686679174483,
+            "f1-macro": 0.9548686679174484,
+            "f1-micro": 0.955,
             "score": 0.955
         },
         "test": {
@@ -266,6 +274,10 @@
                 "support": 200.0
             },
             "cross-entropy": 0.18547705237228077,
+            "roc-auc": 0.9979444444444444,
+            "f1-weighted": 0.9491980184984036,
+            "f1-macro": 0.9491980184984037,
+            "f1-micro": 0.95,
             "score": 0.95
         }
     }

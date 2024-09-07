@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": "one-hot",
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-tic-tac-toe-49"
+            "path": ":data/TabZilla-OpenML-tic-tac-toe-tid=49-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:01.304346",
+    "time": "0:00:04.916836",
     "best_iteration": 12,
     "metrics": {
         "train": {
@@ -65,6 +65,9 @@
             },
             "cross-entropy": 0.21775517448650092,
             "roc-auc": 1.0,
+            "f1-weighted": 0.992145786046757,
+            "f1-macro": 0.9913144705909033,
+            "f1-micro": 0.9921671018276762,
             "score": 0.9921671018276762
         },
         "val": {
@@ -95,6 +98,9 @@
             },
             "cross-entropy": 0.22449477445495022,
             "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "test": {
@@ -125,6 +131,9 @@
             },
             "cross-entropy": 0.2659167445732944,
             "roc-auc": 0.9874939874939875,
+            "f1-weighted": 0.9357954545454547,
+            "f1-macro": 0.9272727272727272,
+            "f1-micro": 0.9375,
             "score": 0.9375
         }
     }

@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-qsar-biodeg-9957"
+            "path": ":data/TabZilla-OpenML-qsar-biodeg-tid=9957-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:00.199357",
+    "time": "0:00:06.019145",
     "best_iteration": 17,
     "metrics": {
         "train": {
@@ -65,6 +65,9 @@
             },
             "cross-entropy": 0.1744043336154384,
             "roc-auc": 0.9998236287132455,
+            "f1-weighted": 0.9964397330722754,
+            "f1-macro": 0.9960140147807708,
+            "f1-micro": 0.99644128113879,
             "score": 0.99644128113879
         },
         "val": {
@@ -95,6 +98,9 @@
             },
             "cross-entropy": 0.330156261782039,
             "roc-auc": 0.9408730158730159,
+            "f1-weighted": 0.8950590017037925,
+            "f1-macro": 0.8818283166109253,
+            "f1-micro": 0.8962264150943396,
             "score": 0.8962264150943396
         },
         "test": {
@@ -125,6 +131,9 @@
             },
             "cross-entropy": 0.3397231582697428,
             "roc-auc": 0.9226190476190477,
+            "f1-weighted": 0.874896823624234,
+            "f1-macro": 0.8581574884199692,
+            "f1-micro": 0.8773584905660378,
             "score": 0.8773584905660378
         }
     }

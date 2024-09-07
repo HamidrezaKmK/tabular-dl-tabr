@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-climate-model-simulation-crashes-146819",
+    "data": ":data/TabZilla-OpenML-climate-model-simulation-crashes-tid=146819-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.06825559516419087,
             "roc-auc": 0.9999332086561582,
+            "f1-weighted": 0.9830457063571638,
+            "f1-macro": 0.9448728465955701,
+            "f1-micro": 0.9837962962962963,
             "score": 0.9837962962962963
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.09638202379155449,
             "roc-auc": 0.99,
+            "f1-weighted": 0.9802504059929803,
+            "f1-macro": 0.9236209335219236,
+            "f1-micro": 0.9814814814814815,
             "score": 0.9814814814814815
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.16117451069905492,
             "roc-auc": 0.79,
+            "f1-weighted": 0.9802504059929803,
+            "f1-macro": 0.9236209335219236,
+            "f1-micro": 0.9814814814814815,
             "score": 0.9814814814814815
         }
     }

@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-jungle_chess_2pcs_raw_endgame_complete-167119"
+            "path": ":data/TabZilla-OpenML-jungle_chess_2pcs_raw_endgame_complete-tid=167119-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:11.532934",
+    "time": "0:00:18.450136",
     "best_iteration": 409,
     "metrics": {
         "train": {
@@ -70,6 +70,10 @@
                 "support": 35855.0
             },
             "cross-entropy": 0.20600754199376656,
+            "roc-auc": 0.9831421971571649,
+            "f1-weighted": 0.898517818328788,
+            "f1-macro": 0.8628756855240195,
+            "f1-micro": 0.8989262306512341,
             "score": 0.8989262306512341
         },
         "val": {
@@ -105,6 +109,10 @@
                 "support": 4482.0
             },
             "cross-entropy": 0.26143890822224963,
+            "roc-auc": 0.971333974081822,
+            "f1-weighted": 0.864759925252591,
+            "f1-macro": 0.8231846187242663,
+            "f1-micro": 0.8650156180276662,
             "score": 0.8650156180276662
         },
         "test": {
@@ -140,6 +148,10 @@
                 "support": 4482.0
             },
             "cross-entropy": 0.2551063817203798,
+            "roc-auc": 0.972565781795098,
+            "f1-weighted": 0.8644939899215878,
+            "f1-macro": 0.8175988850085063,
+            "f1-micro": 0.8645693886657743,
             "score": 0.8645693886657743
         }
     }

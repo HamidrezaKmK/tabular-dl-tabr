@@ -7,7 +7,7 @@ num_policy = "__null__"
 cache = true
 cat_policy = "one-hot"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-analcatdata_dmft-3560"
+path = ":data/TabZilla-OpenML-analcatdata_dmft-tid=3560-fold=0"
 
 [model]
 booster = "gbtree"

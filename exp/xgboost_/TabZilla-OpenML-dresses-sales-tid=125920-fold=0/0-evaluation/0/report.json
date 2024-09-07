@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": "one-hot",
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-dresses-sales-125920"
+            "path": ":data/TabZilla-OpenML-dresses-sales-tid=125920-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:02.129049",
+    "time": "0:00:03.580117",
     "best_iteration": 97,
     "metrics": {
         "train": {
@@ -65,6 +65,9 @@
             },
             "cross-entropy": 0.6176308466168272,
             "roc-auc": 0.7069093801313628,
+            "f1-weighted": 0.6687952207102554,
+            "f1-macro": 0.6515101228011948,
+            "f1-micro": 0.685,
             "score": 0.685
         },
         "val": {
@@ -95,6 +98,9 @@
             },
             "cross-entropy": 0.5885568555236482,
             "roc-auc": 0.7602627257799672,
+            "f1-weighted": 0.7551103565365025,
+            "f1-macro": 0.7453310696095077,
+            "f1-micro": 0.76,
             "score": 0.76
         },
         "test": {
@@ -125,6 +131,9 @@
             },
             "cross-entropy": 0.6990949816466357,
             "roc-auc": 0.5435139573070608,
+            "f1-weighted": 0.5771836007130124,
+            "f1-macro": 0.554367201426025,
+            "f1-micro": 0.6,
             "score": 0.6
         }
     }

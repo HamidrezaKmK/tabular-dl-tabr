@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-bank-marketing-14965",
+    "data": ":data/TabZilla-OpenML-bank-marketing-tid=14965-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.17765910071291544,
             "roc-auc": 0.9497650598633467,
+            "f1-weighted": 0.9161584551543259,
+            "f1-macro": 0.7830293942511984,
+            "f1-micro": 0.9222517142225172,
             "score": 0.9222517142225172
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.20037489459730157,
             "roc-auc": 0.9334137771402985,
+            "f1-weighted": 0.9036950953202085,
+            "f1-macro": 0.7514747473215707,
+            "f1-micro": 0.9101968591019686,
             "score": 0.9101968591019686
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.1961876740396933,
             "roc-auc": 0.9354224334930173,
+            "f1-weighted": 0.901118273887585,
+            "f1-macro": 0.7427605388615688,
+            "f1-micro": 0.9088898717381689,
             "score": 0.9088898717381689
         }
     }

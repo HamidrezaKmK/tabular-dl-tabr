@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-first-order-theorem-proving-9985"
+            "path": ":data/TabZilla-OpenML-first-order-theorem-proving-tid=9985-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:01:09.184178",
+    "time": "0:01:01.258061",
     "best_iteration": 655,
     "metrics": {
         "train": {
@@ -88,6 +88,10 @@
                 "support": 4894.0
             },
             "cross-entropy": 0.07694239446438815,
+            "roc-auc": 0.9995840655149092,
+            "f1-weighted": 0.9777043001356567,
+            "f1-macro": 0.9709365736463611,
+            "f1-micro": 0.9777278299959133,
             "score": 0.9777278299959133
         },
         "val": {
@@ -141,6 +145,10 @@
                 "support": 612.0
             },
             "cross-entropy": 1.2465504253050717,
+            "roc-auc": 0.835968928449461,
+            "f1-weighted": 0.6653927057052105,
+            "f1-macro": 0.5816182499208761,
+            "f1-micro": 0.6748366013071896,
             "score": 0.6748366013071896
         },
         "test": {
@@ -194,6 +202,10 @@
                 "support": 612.0
             },
             "cross-entropy": 1.4305541726511786,
+            "roc-auc": 0.809833727788545,
+            "f1-weighted": 0.5921187475368241,
+            "f1-macro": 0.4754172638824312,
+            "f1-micro": 0.6029411764705882,
             "score": 0.6029411764705882
         }
     }

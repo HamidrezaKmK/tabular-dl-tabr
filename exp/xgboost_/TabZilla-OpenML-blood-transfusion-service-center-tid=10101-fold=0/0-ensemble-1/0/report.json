@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-blood-transfusion-service-center-10101",
+    "data": ":data/TabZilla-OpenML-blood-transfusion-service-center-tid=10101-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.4260087074082475,
             "roc-auc": 0.8555102545095132,
+            "f1-weighted": 0.7816465816771794,
+            "f1-macro": 0.6616046257999465,
+            "f1-micro": 0.8160535117056856,
             "score": 0.8160535117056856
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.4308219746889737,
             "roc-auc": 0.8484405458089669,
+            "f1-weighted": 0.815682382133995,
+            "f1-macro": 0.7208436724565757,
+            "f1-micro": 0.84,
             "score": 0.84
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.48820634755036196,
             "roc-auc": 0.7519493177387915,
+            "f1-weighted": 0.70208,
+            "f1-macro": 0.544,
+            "f1-micro": 0.7466666666666667,
             "score": 0.7466666666666667
         }
     }

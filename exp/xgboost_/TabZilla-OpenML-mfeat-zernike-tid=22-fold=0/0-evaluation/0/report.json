@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-mfeat-zernike-22"
+            "path": ":data/TabZilla-OpenML-mfeat-zernike-tid=22-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:18.800228",
+    "time": "0:00:36.122365",
     "best_iteration": 101,
     "metrics": {
         "train": {
@@ -112,6 +112,10 @@
                 "support": 1600.0
             },
             "cross-entropy": 0.03387900147725118,
+            "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -189,6 +193,10 @@
                 "support": 200.0
             },
             "cross-entropy": 0.6016398951075485,
+            "roc-auc": 0.9695000000000001,
+            "f1-weighted": 0.8111328415939277,
+            "f1-macro": 0.8111328415939276,
+            "f1-micro": 0.81,
             "score": 0.81
         },
         "test": {
@@ -266,6 +274,10 @@
                 "support": 200.0
             },
             "cross-entropy": 0.6581793058103971,
+            "roc-auc": 0.9635555555555555,
+            "f1-weighted": 0.797282473822761,
+            "f1-macro": 0.797282473822761,
+            "f1-micro": 0.795,
             "score": 0.795
         }
     }

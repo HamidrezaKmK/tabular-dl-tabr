@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-Bioresponse-9910",
+    "data": ":data/TabZilla-OpenML-Bioresponse-tid=9910-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -37,6 +37,9 @@
             },
             "cross-entropy": 0.023327790472670598,
             "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -67,6 +70,9 @@
             },
             "cross-entropy": 0.4868825496530987,
             "roc-auc": 0.8816874785198763,
+            "f1-weighted": 0.8342958362088796,
+            "f1-macro": 0.8328588681849551,
+            "f1-micro": 0.8346666666666667,
             "score": 0.8346666666666667
         },
         "test": {
@@ -97,6 +103,9 @@
             },
             "cross-entropy": 0.47102818220753323,
             "roc-auc": 0.8875968992248062,
+            "f1-weighted": 0.8187348998519212,
+            "f1-macro": 0.8170787545787546,
+            "f1-micro": 0.8191489361702128,
             "score": 0.8191489361702128
         }
     }

@@ -7,7 +7,7 @@ num_policy = "quantile"
 cache = true
 cat_policy = "one-hot"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-adult-7592"
+path = ":data/TabZilla-OpenML-adult-tid=7592-fold=0"
 
 [model]
 booster = "gbtree"

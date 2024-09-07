@@ -14,7 +14,7 @@ num_policy = "quantile"
 cache = true
 cat_policy = "__null__"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-blood-transfusion-service-center-10101"
+path = ":data/TabZilla-OpenML-blood-transfusion-service-center-tid=10101-fold=0"
 
 [space.model]
 booster = "gbtree"

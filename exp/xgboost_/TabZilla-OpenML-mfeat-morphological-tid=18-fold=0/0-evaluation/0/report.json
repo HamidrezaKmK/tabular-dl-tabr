@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": null,
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-mfeat-morphological-18"
+            "path": ":data/TabZilla-OpenML-mfeat-morphological-tid=18-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:03.285792",
+    "time": "0:00:20.486169",
     "best_iteration": 9,
     "metrics": {
         "train": {
@@ -112,6 +112,10 @@
                 "support": 1600.0
             },
             "cross-entropy": 0.6431702547436485,
+            "roc-auc": 0.9703250868055556,
+            "f1-weighted": 0.749297597686677,
+            "f1-macro": 0.7492975976866771,
+            "f1-micro": 0.758125,
             "score": 0.758125
         },
         "val": {
@@ -189,6 +193,10 @@
                 "support": 200.0
             },
             "cross-entropy": 0.7161782309730927,
+            "roc-auc": 0.9604444444444444,
+            "f1-weighted": 0.74573524519082,
+            "f1-macro": 0.7457352451908201,
+            "f1-micro": 0.75,
             "score": 0.75
         },
         "test": {
@@ -266,6 +274,10 @@
                 "support": 200.0
             },
             "cross-entropy": 0.8469802033406222,
+            "roc-auc": 0.9397222222222221,
+            "f1-weighted": 0.6709666756008219,
+            "f1-macro": 0.6709666756008219,
+            "f1-micro": 0.7,
             "score": 0.7
         }
     }

@@ -12,9 +12,9 @@ seed = 0
 seed = 0
 num_policy = "quantile"
 cache = true
-cat_policy = "one-hot"
+cat_policy = "__null__"
 y_policy = "__null__"
-path = ":data/TabZilla-OpenML-Internet-Advertisements-167125"
+path = ":data/TabZilla-OpenML-Internet-Advertisements-tid=167125-fold=0"
 
 [space.model]
 booster = "gbtree"

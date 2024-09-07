@@ -6,7 +6,7 @@
         ]
     },
     "single_model_function": "bin.xgboost_.main",
-    "data": ":data/TabZilla-OpenML-Fashion-MNIST-146825",
+    "data": ":data/TabZilla-OpenML-Fashion-MNIST-tid=146825-fold=0",
     "prediction_type": "probs",
     "metrics": {
         "train": {
@@ -84,6 +84,10 @@
                 "support": 56000.0
             },
             "cross-entropy": 0.01425380991488476,
+            "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -161,6 +165,10 @@
                 "support": 7000.0
             },
             "cross-entropy": 0.25414884287828293,
+            "roc-auc": 0.9944407936507937,
+            "f1-weighted": 0.91400708592873,
+            "f1-macro": 0.9140070859287303,
+            "f1-micro": 0.9145714285714286,
             "score": 0.9145714285714286
         },
         "test": {
@@ -238,6 +246,10 @@
                 "support": 7000.0
             },
             "cross-entropy": 0.26239197351260085,
+            "roc-auc": 0.994317074829932,
+            "f1-weighted": 0.9076970041608664,
+            "f1-macro": 0.9076970041608664,
+            "f1-micro": 0.9081428571428571,
             "score": 0.9081428571428571
         }
     }

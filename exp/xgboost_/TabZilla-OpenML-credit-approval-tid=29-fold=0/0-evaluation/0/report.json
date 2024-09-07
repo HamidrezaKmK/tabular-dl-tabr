@@ -11,7 +11,7 @@
             "cache": true,
             "cat_policy": "one-hot",
             "y_policy": null,
-            "path": ":data/TabZilla-OpenML-credit-approval-29"
+            "path": ":data/TabZilla-OpenML-credit-approval-tid=29-fold=0"
         },
         "model": {
             "booster": "gbtree",
@@ -34,7 +34,7 @@
         "neighbors": null
     },
     "prediction_type": "probs",
-    "time": "0:00:00.182464",
+    "time": "0:00:01.436136",
     "best_iteration": 40,
     "metrics": {
         "train": {
@@ -65,6 +65,9 @@
             },
             "cross-entropy": 0.06717077248397502,
             "roc-auc": 1.0,
+            "f1-weighted": 1.0,
+            "f1-macro": 1.0,
+            "f1-micro": 1.0,
             "score": 1.0
         },
         "val": {
@@ -95,6 +98,9 @@
             },
             "cross-entropy": 0.3165721277963959,
             "roc-auc": 0.929059829059829,
+            "f1-weighted": 0.9134106933019976,
+            "f1-macro": 0.9125844594594594,
+            "f1-micro": 0.9130434782608695,
             "score": 0.9130434782608695
         },
         "test": {
@@ -125,6 +131,9 @@
             },
             "cross-entropy": 0.34843017696538275,
             "roc-auc": 0.9205128205128206,
+            "f1-weighted": 0.8555030634088729,
+            "f1-macro": 0.8535653650254669,
+            "f1-micro": 0.855072463768116,
             "score": 0.855072463768116
         }
     }

@@ -17,7 +17,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-jm1-3904"
+                "path": ":data/TabZilla-OpenML-jm1-tid=3904-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -89,7 +89,7 @@
                 "cache": true,
                 "cat_policy": null,
                 "y_policy": null,
-                "path": ":data/TabZilla-OpenML-jm1-3904"
+                "path": ":data/TabZilla-OpenML-jm1-tid=3904-fold=0"
             },
             "model": {
                 "booster": "gbtree",
@@ -112,7 +112,7 @@
             "neighbors": null
         },
         "prediction_type": "probs",
-        "time": "0:00:05.024347",
+        "time": "0:00:06.326242",
         "best_iteration": 363,
         "metrics": {
             "train": {
@@ -143,6 +143,9 @@
                 },
                 "cross-entropy": 0.14749985818909028,
                 "roc-auc": 0.9917762996574201,
+                "f1-weighted": 0.9615968343846613,
+                "f1-macro": 0.9363001757096137,
+                "f1-micro": 0.9630182611691742,
                 "score": 0.9630182611691742
             },
             "val": {
@@ -173,6 +176,9 @@
                 },
                 "cross-entropy": 0.4268155614211496,
                 "roc-auc": 0.7661882347860821,
+                "f1-weighted": 0.8057425574064626,
+                "f1-macro": 0.65112031109231,
+                "f1-micro": 0.8337924701561065,
                 "score": 0.8337924701561065
             },
             "test": {
@@ -203,12 +209,15 @@
                 },
                 "cross-entropy": 0.43368874939069507,
                 "roc-auc": 0.7528608751039091,
+                "f1-weighted": 0.7900167670940538,
+                "f1-macro": 0.6232578827715727,
+                "f1-micro": 0.820018365472911,
                 "score": 0.820018365472911
             }
         },
         "trial_id": 15,
-        "tuning_time": "0:01:00.062423"
+        "tuning_time": "0:01:32.637875"
     },
-    "time": "0:01:44.730599",
+    "time": "0:03:10.321797",
     "n_completed_trials": 30
 }
