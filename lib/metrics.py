@@ -58,6 +58,7 @@ def calculate_metrics(
             'rmse': sklearn.metrics.mean_squared_error(y_true, y_pred) ** 0.5 * y_std,
             'mae': sklearn.metrics.mean_absolute_error(y_true, y_pred) * y_std,
             'r2': sklearn.metrics.r2_score(y_true, y_pred),
+            'corr': np.corrcoef(y_true, y_pred)[0, 1],
         }
     else:
         assert prediction_type is not None
@@ -68,6 +69,8 @@ def calculate_metrics(
         )
         if probs is not None:
             result['cross-entropy'] = sklearn.metrics.log_loss(y_true, probs)
-        if task_type == TaskType.BINCLASS and probs is not None:
-            result['roc-auc'] = sklearn.metrics.roc_auc_score(y_true, probs)
+            result['roc-auc'] = sklearn.metrics.roc_auc_score(y_true, probs, multi_class='ovo')
+            result['f1-weighted'] = sklearn.metrics.f1_score(y_true, labels, average='weighted')
+            result['f1-macro'] = sklearn.metrics.f1_score(y_true, labels, average='macro')
+            result['f1-micro'] = sklearn.metrics.f1_score(y_true, labels, average='micro')
     return result
