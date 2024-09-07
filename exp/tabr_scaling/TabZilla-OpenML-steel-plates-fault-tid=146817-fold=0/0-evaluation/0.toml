@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-steel-plates-fault-146817"
+path = ":data/TabZilla-OpenML-steel-plates-fault-tid=146817-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0007098936257405903
+weight_decay = 1.097581541938016e-06
 
 [model]
 num_embeddings = "__null__"
-d_main = 291
-context_dropout = 0.1620047839152989
+d_main = 336
+context_dropout = 0.4668940505699103
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.44111641327355694
+dropout0 = 0.5220072889480915
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.0008401891913442231
-weight_decay = 1.5278610607077096e-05

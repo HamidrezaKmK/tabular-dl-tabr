@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-eucalyptus-2079"
+path = ":data/TabZilla-OpenML-eucalyptus-tid=2079-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0007717846862118063
+weight_decay = 0.0
 
 [model]
 num_embeddings = "__null__"
-d_main = 254
-context_dropout = 0.4291136198234517
+d_main = 222
+context_dropout = 0.4185787175563589
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.3616580256429863
+dropout0 = 0.0361352829775619
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.00012296071107325708
-weight_decay = 7.501954443620125e-06

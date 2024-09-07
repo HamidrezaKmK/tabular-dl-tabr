@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-vehicle-53"
+path = ":data/TabZilla-OpenML-vehicle-tid=53-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00013816356822574785
+weight_decay = 1.5998881492631499e-06
 
 [model]
 num_embeddings = "__null__"
-d_main = 116
-context_dropout = 0.05227757982092442
+d_main = 156
+context_dropout = 0.09678571073099775
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.01213103846419543
+dropout0 = 0.39186499527923907
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.0004626362841475585
-weight_decay = 9.062263471261964e-05

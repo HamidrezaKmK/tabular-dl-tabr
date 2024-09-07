@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-diabetes-37"
+path = ":data/TabZilla-OpenML-diabetes-tid=37-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0008401891913442231
+weight_decay = 1.5278610607077096e-05
 
 [model]
 num_embeddings = "__null__"
-d_main = 353
-context_dropout = 0.5781976563006176
+d_main = 261
+context_dropout = 0.13384897958437098
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.2300649112954666
+dropout0 = 0.571649406910191
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.00038322168504927853
-weight_decay = 7.098936257405907e-05

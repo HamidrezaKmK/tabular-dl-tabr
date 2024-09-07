@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "__null__"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-connect-4-146195"
+path = ":data/TabZilla-OpenML-connect-4-tid=146195-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00013816356822574785
+weight_decay = 1.5998881492631499e-06
 
 [model]
 num_embeddings = "__null__"
-d_main = 346
-context_dropout = 0.0974957608058249
+d_main = 156
+context_dropout = 0.09678571073099775
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.3693357385703065
+dropout0 = 0.39186499527923907
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 1.7686421290636623e-05
-weight_decay = 0.0

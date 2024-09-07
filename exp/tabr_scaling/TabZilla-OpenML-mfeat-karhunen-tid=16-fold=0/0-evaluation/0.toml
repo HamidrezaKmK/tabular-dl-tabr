@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-mfeat-karhunen-16"
+path = ":data/TabZilla-OpenML-mfeat-karhunen-tid=16-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00019407982792082253
+weight_decay = 1.0924118351371678e-06
 
 [model]
 num_embeddings = "__null__"
-d_main = 124
-context_dropout = 0.5027669444992823
+d_main = 183
+context_dropout = 0.396104122495611
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.05765904473637784
+dropout0 = 0.17404656432626645
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.0008972612866432509
-weight_decay = 1.62065673920372e-05

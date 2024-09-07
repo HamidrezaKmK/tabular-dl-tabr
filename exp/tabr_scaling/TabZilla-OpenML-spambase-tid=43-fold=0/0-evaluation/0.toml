@@ -9,8 +9,13 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-spambase-43"
+path = ":data/TabZilla-OpenML-spambase-tid=43-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00013816356822574785
+weight_decay = 1.5998881492631499e-06
 
 [model]
 num_embeddings = "__null__"
@@ -24,8 +29,3 @@ dropout0 = 0.39186499527923907
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 3.210577849550394e-05
-weight_decay = 0.0

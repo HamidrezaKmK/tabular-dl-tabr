@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-qsar-biodeg-9957"
+path = ":data/TabZilla-OpenML-qsar-biodeg-tid=9957-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00024823187419258655
+weight_decay = 5.404613626296217e-05
 
 [model]
 num_embeddings = "__null__"
-d_main = 353
-context_dropout = 0.5781976563006176
+d_main = 377
+context_dropout = 0.5134820054355665
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.2300649112954666
+dropout0 = 0.007028450511001183
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.00038322168504927853
-weight_decay = 7.098936257405907e-05

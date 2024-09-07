@@ -1,7 +1,7 @@
 seed = 0
-function = "bin.tabr_scaling.main"
 n_trials = 30
 timeout = "__null__"
+function = "bin.tabr_scaling.main"
 
 [sampler]
 
@@ -17,8 +17,13 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-ozone-level-8hr-9978"
+path = ":data/TabZilla-OpenML-ozone-level-8hr-tid=9978-fold=0"
 y_policy = "__null__"
+
+[space.optimizer]
+type = "AdamW"
+lr = [ "_tune_", "loguniform", 1e-5, 0.001,]
+weight_decay = [ "_tune_", "?loguniform", 0.0, 1e-6, 0.0001,]
 
 [space.model]
 num_embeddings = "__null__"
@@ -32,8 +37,3 @@ dropout0 = [ "_tune_", "uniform", 0.0, 0.6,]
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[space.optimizer]
-type = "AdamW"
-lr = [ "_tune_", "loguniform", 1e-5, 0.001,]
-weight_decay = [ "_tune_", "?loguniform", 0.0, 1e-6, 0.0001,]
