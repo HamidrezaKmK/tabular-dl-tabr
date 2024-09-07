@@ -12,7 +12,7 @@ seed = 0
 seed = 0
 num_policy = "__null__"
 cache = true
-cat_policy = "one-hot"
+cat_policy = "__null__"
 y_policy = "__null__"
 path = ":data/TabZilla-OpenML-dna-167140"
 
