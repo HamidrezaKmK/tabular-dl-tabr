@@ -1,0 +1,222 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-40GB"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.tabr.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/TabZilla-OpenML-dresses-sales-tid=125920-fold=0",
+                "y_policy": null
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": [
+                    "_tune_",
+                    "int",
+                    96,
+                    384
+                ],
+                "context_dropout": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            }
+        }
+    },
+    "best": {
+        "function": "bin.tabr.main",
+        "gpus": [
+            "NVIDIA A100-SXM4-40GB"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/TabZilla-OpenML-dresses-sales-tid=125920-fold=0",
+                "y_policy": null
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 7.50195444362012e-05,
+                "weight_decay": 5.846326121643419e-06
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": 324,
+                "context_dropout": 0.31733695185174265,
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": 0.3408267366563594,
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            }
+        },
+        "n_parameters": 1002781,
+        "prediction_type": "logits",
+        "best_epoch": 25,
+        "metrics": {
+            "train": {
+                "0": {
+                    "precision": 0.736,
+                    "recall": 0.7931034482758621,
+                    "f1-score": 0.7634854771784232,
+                    "support": 232.0
+                },
+                "1": {
+                    "precision": 0.68,
+                    "recall": 0.6071428571428571,
+                    "f1-score": 0.6415094339622641,
+                    "support": 168.0
+                },
+                "accuracy": 0.715,
+                "macro avg": {
+                    "precision": 0.708,
+                    "recall": 0.7001231527093597,
+                    "f1-score": 0.7024974555703436,
+                    "support": 400.0
+                },
+                "weighted avg": {
+                    "precision": 0.71248,
+                    "recall": 0.715,
+                    "f1-score": 0.7122555390276364,
+                    "support": 400.0
+                },
+                "cross-entropy": 0.547584700844638,
+                "roc-auc": 0.7888444170771757,
+                "f1-weighted": 0.7122555390276364,
+                "f1-macro": 0.7024974555703436,
+                "f1-micro": 0.715,
+                "score": 0.715
+            },
+            "val": {
+                "0": {
+                    "precision": 0.7575757575757576,
+                    "recall": 0.8620689655172413,
+                    "f1-score": 0.8064516129032258,
+                    "support": 29.0
+                },
+                "1": {
+                    "precision": 0.7647058823529411,
+                    "recall": 0.6190476190476191,
+                    "f1-score": 0.6842105263157895,
+                    "support": 21.0
+                },
+                "accuracy": 0.76,
+                "macro avg": {
+                    "precision": 0.7611408199643493,
+                    "recall": 0.7405582922824302,
+                    "f1-score": 0.7453310696095077,
+                    "support": 50.0
+                },
+                "weighted avg": {
+                    "precision": 0.7605704099821747,
+                    "recall": 0.76,
+                    "f1-score": 0.7551103565365025,
+                    "support": 50.0
+                },
+                "cross-entropy": 0.602436782347478,
+                "roc-auc": 0.729064039408867,
+                "f1-weighted": 0.7551103565365025,
+                "f1-macro": 0.7453310696095077,
+                "f1-micro": 0.76,
+                "score": 0.76
+            },
+            "test": {
+                "0": {
+                    "precision": 0.65625,
+                    "recall": 0.7241379310344828,
+                    "f1-score": 0.6885245901639344,
+                    "support": 29.0
+                },
+                "1": {
+                    "precision": 0.5555555555555556,
+                    "recall": 0.47619047619047616,
+                    "f1-score": 0.5128205128205128,
+                    "support": 21.0
+                },
+                "accuracy": 0.62,
+                "macro avg": {
+                    "precision": 0.6059027777777778,
+                    "recall": 0.6001642036124795,
+                    "f1-score": 0.6006725514922235,
+                    "support": 50.0
+                },
+                "weighted avg": {
+                    "precision": 0.6139583333333334,
+                    "recall": 0.62,
+                    "f1-score": 0.6147288776796974,
+                    "support": 50.0
+                },
+                "cross-entropy": 0.725422581353829,
+                "roc-auc": 0.5763546798029556,
+                "f1-weighted": 0.6147288776796974,
+                "f1-macro": 0.6006725514922235,
+                "f1-micro": 0.62,
+                "score": 0.62
+            }
+        },
+        "time": "0:00:04.433656",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 1,
+        "tuning_time": "0:00:15.606053"
+    },
+    "time": "0:01:50.460098",
+    "n_completed_trials": 30
+}
