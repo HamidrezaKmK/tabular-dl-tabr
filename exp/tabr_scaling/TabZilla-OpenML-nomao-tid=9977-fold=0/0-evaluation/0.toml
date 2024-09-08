@@ -9,23 +9,23 @@ seed = 0
 cache = true
 num_policy = "quantile"
 cat_policy = "__null__"
-path = ":data/TabZilla-OpenML-nomao-9977"
+path = ":data/TabZilla-OpenML-nomao-tid=9977-fold=0"
 y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0005783708472141561
+weight_decay = 2.4269631383790863e-05
 
 [model]
 num_embeddings = "__null__"
-d_main = 299
-context_dropout = 0.060136132387380664
+d_main = 305
+context_dropout = 0.30079462915602134
 d_multiplier = 2.0
 encoder_n_blocks = 0
 predictor_n_blocks = 1
 mixer_normalization = "auto"
-dropout0 = 0.5516895682468042
+dropout0 = 0.5736501808339343
 dropout1 = 0.0
 normalization = "LayerNorm"
 activation = "ReLU"
-
-[optimizer]
-type = "AdamW"
-lr = 0.000268214713971312
-weight_decay = 0.0
