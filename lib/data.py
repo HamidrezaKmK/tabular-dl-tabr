@@ -212,7 +212,6 @@ class Dataset(Generic[T]):
         )
 
     def cat_cardinalities(self) -> list[int]:
-        unique = np.unique if self._is_numpy() else torch.unique
         # concatenate all self.X_cat['train'] and self.X_cat['val'] and self.X_cat['test'] to get the cardinality
         if self.X_cat is None:
             return []
@@ -220,7 +219,7 @@ class Dataset(Generic[T]):
             X_concatenated = torch.cat(
                 [self.X_cat[part] for part in self.parts() if self.X_cat is not None], dim=0
             )
-            return [len(unique(column)) for column in X_concatenated.T]
+            return [torch.max(column) + 1 for column in X_concatenated.T]
 
     def calculate_metrics(
         self,

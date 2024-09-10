@@ -18,9 +18,9 @@
                 "seed": 0,
                 "cache": true,
                 "num_policy": "quantile",
-                "cat_policy": "ordinal",
+                "cat_policy": null,
                 "y_policy": "standard",
-                "path": ":data/CTR23-OpenML-tid=361234-ctr23_361234-seed=0"
+                "path": ":data/CTR23-OpenML-tid=361254-ctr23_361254-seed=0"
             },
             "optimizer": {
                 "type": "AdamW",
@@ -101,9 +101,9 @@
                 "seed": 0,
                 "cache": true,
                 "num_policy": "quantile",
-                "cat_policy": "ordinal",
+                "cat_policy": null,
                 "y_policy": "standard",
-                "path": ":data/CTR23-OpenML-tid=361234-ctr23_361234-seed=0"
+                "path": ":data/CTR23-OpenML-tid=361254-ctr23_361254-seed=0"
             },
             "optimizer": {
                 "type": "AdamW",
@@ -127,38 +127,38 @@
                 }
             }
         },
-        "n_parameters": 202973,
+        "n_parameters": 352198,
         "prediction_type": null,
-        "best_epoch": 69,
+        "best_epoch": 219,
         "metrics": {
             "train": {
-                "rmse": 2.039083634997813,
-                "mae": 1.4415833690578523,
-                "r2": 0.6068657636642456,
-                "corr": 0.7800432021506304,
-                "score": -2.039083634997813
+                "rmse": 1.6388816927796388,
+                "mae": 1.1688584836439873,
+                "r2": 0.9935460686683655,
+                "corr": 0.9967843803946357,
+                "score": -1.6388816927796388
             },
             "val": {
-                "rmse": 2.0345546060380078,
-                "mae": 1.4265909623428428,
-                "r2": 0.5652363300323486,
-                "corr": 0.7520409197980997,
-                "score": -2.0345546060380078
+                "rmse": 2.1584406980071393,
+                "mae": 1.4965229230840436,
+                "r2": 0.9892920255661011,
+                "corr": 0.9946533014433632,
+                "score": -2.1584406980071393
             },
             "test": {
-                "rmse": 2.1716974400296314,
-                "mae": 1.5660132308427208,
-                "r2": 0.5427581071853638,
-                "corr": 0.7377204241373821,
-                "score": -2.1716974400296314
+                "rmse": 2.1935004489831336,
+                "mae": 1.491088840659458,
+                "r2": 0.9882606863975525,
+                "corr": 0.9941354663992769,
+                "score": -2.1935004489831336
             }
         },
-        "time": "0:00:03.053814",
+        "time": "0:00:44.825041",
         "chunk_size": null,
         "eval_batch_size": 32768,
         "trial_id": 2,
-        "tuning_time": "0:00:05.936528"
+        "tuning_time": "0:01:29.258055"
     },
-    "time": "0:01:28.690476",
-    "n_completed_trials": 30
+    "time": "0:03:53.164321",
+    "n_completed_trials": 5
 }

@@ -20,7 +20,7 @@
                 "num_policy": "quantile",
                 "cat_policy": "ordinal",
                 "y_policy": "standard",
-                "path": ":data/CTR23-OpenML-tid=361234-ctr23_361234-seed=0"
+                "path": ":data/CTR23-OpenML-tid=361252-ctr23_361252-seed=0"
             },
             "optimizer": {
                 "type": "AdamW",
@@ -103,7 +103,7 @@
                 "num_policy": "quantile",
                 "cat_policy": "ordinal",
                 "y_policy": "standard",
-                "path": ":data/CTR23-OpenML-tid=361234-ctr23_361234-seed=0"
+                "path": ":data/CTR23-OpenML-tid=361252-ctr23_361252-seed=0"
             },
             "optimizer": {
                 "type": "AdamW",
@@ -127,38 +127,38 @@
                 }
             }
         },
-        "n_parameters": 202973,
+        "n_parameters": 300296,
         "prediction_type": null,
-        "best_epoch": 69,
+        "best_epoch": 198,
         "metrics": {
             "train": {
-                "rmse": 2.039083634997813,
-                "mae": 1.4415833690578523,
-                "r2": 0.6068657636642456,
-                "corr": 0.7800432021506304,
-                "score": -2.039083634997813
+                "rmse": 0.5669433327950667,
+                "mae": 0.32708363767204673,
+                "r2": 0.9987697601318359,
+                "corr": 0.9993962401382299,
+                "score": -0.5669433327950667
             },
             "val": {
-                "rmse": 2.0345546060380078,
-                "mae": 1.4265909623428428,
-                "r2": 0.5652363300323486,
-                "corr": 0.7520409197980997,
-                "score": -2.0345546060380078
+                "rmse": 0.9434219734353625,
+                "mae": 0.3928139852165202,
+                "r2": 0.996512234210968,
+                "corr": 0.9982622067379089,
+                "score": -0.9434219734353625
             },
             "test": {
-                "rmse": 2.1716974400296314,
-                "mae": 1.5660132308427208,
-                "r2": 0.5427581071853638,
-                "corr": 0.7377204241373821,
-                "score": -2.1716974400296314
+                "rmse": 0.7862591518369025,
+                "mae": 0.39278460008799243,
+                "r2": 0.9975477457046509,
+                "corr": 0.9987864052212583,
+                "score": -0.7862591518369025
             }
         },
-        "time": "0:00:03.053814",
+        "time": "0:02:35.758214",
         "chunk_size": null,
         "eval_batch_size": 32768,
         "trial_id": 2,
-        "tuning_time": "0:00:05.936528"
+        "tuning_time": "0:03:30.879429"
     },
-    "time": "0:01:28.690476",
-    "n_completed_trials": 30
+    "time": "0:27:57.828158",
+    "n_completed_trials": 12
 }

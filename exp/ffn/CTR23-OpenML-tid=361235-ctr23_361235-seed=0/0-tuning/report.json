@@ -18,9 +18,9 @@
                 "seed": 0,
                 "cache": true,
                 "num_policy": "quantile",
-                "cat_policy": "ordinal",
+                "cat_policy": null,
                 "y_policy": "standard",
-                "path": ":data/CTR23-OpenML-tid=361234-ctr23_361234-seed=0"
+                "path": ":data/CTR23-OpenML-tid=361235-ctr23_361235-seed=0"
             },
             "optimizer": {
                 "type": "AdamW",
@@ -101,64 +101,64 @@
                 "seed": 0,
                 "cache": true,
                 "num_policy": "quantile",
-                "cat_policy": "ordinal",
+                "cat_policy": null,
                 "y_policy": "standard",
-                "path": ":data/CTR23-OpenML-tid=361234-ctr23_361234-seed=0"
+                "path": ":data/CTR23-OpenML-tid=361235-ctr23_361235-seed=0"
             },
             "optimizer": {
                 "type": "AdamW",
-                "lr": 8.374496868436811e-05,
-                "weight_decay": 0.0
+                "lr": 1.8661567862395527e-05,
+                "weight_decay": 1.519656816607237e-05
             },
             "model": {
                 "backbone": {
                     "type": "MLP",
                     "n_blocks": 4,
-                    "d_layer": 201,
+                    "d_layer": 691,
                     "dropout": 0.0,
                     "activation": "ReLU"
                 },
                 "num_embeddings": {
                     "type": "PLREmbeddings",
-                    "n_frequencies": 49,
-                    "frequency_scale": 0.11434638743472199,
-                    "d_embedding": 53,
+                    "n_frequencies": 88,
+                    "frequency_scale": 0.2952891435379983,
+                    "d_embedding": 37,
                     "lite": true
                 }
             }
         },
-        "n_parameters": 202973,
+        "n_parameters": 1570723,
         "prediction_type": null,
-        "best_epoch": 69,
+        "best_epoch": 449,
         "metrics": {
             "train": {
-                "rmse": 2.039083634997813,
-                "mae": 1.4415833690578523,
-                "r2": 0.6068657636642456,
-                "corr": 0.7800432021506304,
-                "score": -2.039083634997813
+                "rmse": 0.4425713037024437,
+                "mae": 0.293177081456804,
+                "r2": 0.9958268404006958,
+                "corr": 0.9979420977994878,
+                "score": -0.4425713037024437
             },
             "val": {
-                "rmse": 2.0345546060380078,
-                "mae": 1.4265909623428428,
-                "r2": 0.5652363300323486,
-                "corr": 0.7520409197980997,
-                "score": -2.0345546060380078
+                "rmse": 1.2012532300492802,
+                "mae": 0.845079949213158,
+                "r2": 0.9677739143371582,
+                "corr": 0.9837960517684597,
+                "score": -1.2012532300492802
             },
             "test": {
-                "rmse": 2.1716974400296314,
-                "mae": 1.5660132308427208,
-                "r2": 0.5427581071853638,
-                "corr": 0.7377204241373821,
-                "score": -2.1716974400296314
+                "rmse": 1.0622312408422223,
+                "mae": 0.7744286598723775,
+                "r2": 0.9794067144393921,
+                "corr": 0.9897947786055253,
+                "score": -1.0622312408422223
             }
         },
-        "time": "0:00:03.053814",
+        "time": "0:00:10.242049",
         "chunk_size": null,
         "eval_batch_size": 32768,
-        "trial_id": 2,
-        "tuning_time": "0:00:05.936528"
+        "trial_id": 12,
+        "tuning_time": "0:01:46.485298"
     },
-    "time": "0:01:28.690476",
+    "time": "0:03:07.015551",
     "n_completed_trials": 30
 }
