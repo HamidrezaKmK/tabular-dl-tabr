@@ -1,0 +1,242 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.ffn.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": null,
+                "path": ":data/TabZilla-OpenML-blood-transfusion-service-center-tid=10101-fold=0"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            },
+            "model": {
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": [
+                        "_tune_",
+                        "int",
+                        1,
+                        6
+                    ],
+                    "d_layer": [
+                        "_tune_",
+                        "int",
+                        64,
+                        1024
+                    ],
+                    "dropout": [
+                        "_tune_",
+                        "?uniform",
+                        0.0,
+                        0.0,
+                        0.5
+                    ],
+                    "activation": "ReLU"
+                },
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": [
+                        "_tune_",
+                        "int",
+                        16,
+                        96
+                    ],
+                    "frequency_scale": [
+                        "_tune_",
+                        "loguniform",
+                        0.01,
+                        100.0
+                    ],
+                    "d_embedding": [
+                        "_tune_",
+                        "int",
+                        16,
+                        64
+                    ],
+                    "lite": true
+                }
+            }
+        }
+    },
+    "best": {
+        "function": "bin.ffn.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": null,
+                "path": ":data/TabZilla-OpenML-blood-transfusion-service-center-tid=10101-fold=0"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.00037179695110280977,
+                "weight_decay": 1.3424883704781802e-06
+            },
+            "model": {
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 3,
+                    "d_layer": 1003,
+                    "dropout": 0.0,
+                    "activation": "ReLU"
+                },
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": 93,
+                    "frequency_scale": 0.08449023263251551,
+                    "d_embedding": 62,
+                    "lite": true
+                }
+            }
+        },
+        "n_parameters": 2276741,
+        "prediction_type": "logits",
+        "best_epoch": 32,
+        "metrics": {
+            "train": {
+                "0": {
+                    "precision": 0.846,
+                    "recall": 0.9276315789473685,
+                    "f1-score": 0.8849372384937239,
+                    "support": 456.0
+                },
+                "1": {
+                    "precision": 0.6632653061224489,
+                    "recall": 0.45774647887323944,
+                    "f1-score": 0.5416666666666666,
+                    "support": 142.0
+                },
+                "accuracy": 0.8160535117056856,
+                "macro avg": {
+                    "precision": 0.7546326530612244,
+                    "recall": 0.6926890289103039,
+                    "f1-score": 0.7133019525801952,
+                    "support": 598.0
+                },
+                "weighted avg": {
+                    "precision": 0.8026081496143609,
+                    "recall": 0.8160535117056856,
+                    "f1-score": 0.803424828461212,
+                    "support": 598.0
+                },
+                "cross-entropy": 0.4389982597978686,
+                "roc-auc": 0.7873733629849271,
+                "f1-weighted": 0.803424828461212,
+                "f1-macro": 0.7133019525801952,
+                "f1-micro": 0.8160535117056856,
+                "score": 0.8160535117056856
+            },
+            "val": {
+                "0": {
+                    "precision": 0.8571428571428571,
+                    "recall": 0.9473684210526315,
+                    "f1-score": 0.9,
+                    "support": 57.0
+                },
+                "1": {
+                    "precision": 0.75,
+                    "recall": 0.5,
+                    "f1-score": 0.6,
+                    "support": 18.0
+                },
+                "accuracy": 0.84,
+                "macro avg": {
+                    "precision": 0.8035714285714286,
+                    "recall": 0.7236842105263157,
+                    "f1-score": 0.75,
+                    "support": 75.0
+                },
+                "weighted avg": {
+                    "precision": 0.8314285714285714,
+                    "recall": 0.84,
+                    "f1-score": 0.8280000000000001,
+                    "support": 75.0
+                },
+                "cross-entropy": 0.4037578811969484,
+                "roc-auc": 0.8562378167641326,
+                "f1-weighted": 0.8280000000000001,
+                "f1-macro": 0.75,
+                "f1-micro": 0.84,
+                "score": 0.84
+            },
+            "test": {
+                "0": {
+                    "precision": 0.8,
+                    "recall": 0.9122807017543859,
+                    "f1-score": 0.8524590163934426,
+                    "support": 57.0
+                },
+                "1": {
+                    "precision": 0.5,
+                    "recall": 0.2777777777777778,
+                    "f1-score": 0.35714285714285715,
+                    "support": 18.0
+                },
+                "accuracy": 0.76,
+                "macro avg": {
+                    "precision": 0.65,
+                    "recall": 0.5950292397660819,
+                    "f1-score": 0.6048009367681498,
+                    "support": 75.0
+                },
+                "weighted avg": {
+                    "precision": 0.728,
+                    "recall": 0.76,
+                    "f1-score": 0.7335831381733021,
+                    "support": 75.0
+                },
+                "cross-entropy": 0.4853095842469646,
+                "roc-auc": 0.76364522417154,
+                "f1-weighted": 0.7335831381733021,
+                "f1-macro": 0.6048009367681498,
+                "f1-micro": 0.76,
+                "score": 0.76
+            }
+        },
+        "time": "0:00:01.165007",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 24,
+        "tuning_time": "0:00:17.082653"
+    },
+    "time": "0:00:20.911187",
+    "n_completed_trials": 30
+}
