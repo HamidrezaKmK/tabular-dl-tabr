@@ -51,8 +51,8 @@ class Model(nn.Module):
         backbone: dict,  # lib.deep.ModuleSpec
     ) -> None:
         assert n_num_features or n_bin_features or cat_cardinalities
-        if num_embeddings is not None:
-            assert n_num_features
+        if n_num_features == 0:
+            num_embeddings = None
 
         # To support new backbone:
         # - add it to the list below

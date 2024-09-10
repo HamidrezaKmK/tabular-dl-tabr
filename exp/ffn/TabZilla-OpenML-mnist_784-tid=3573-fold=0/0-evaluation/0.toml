@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[data]
+seed = 0
+cache = true
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-mnist_784-tid=3573-fold=0"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0005147622432383661
+weight_decay = 2.883906161101796e-05
+
+[model.backbone]
+type = "MLP"
+n_blocks = 2
+d_layer = 564
+dropout = 0.009260897230306986
+activation = "ReLU"
+
+[model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 80
+frequency_scale = 0.07865000457856676
+d_embedding = 32
+lite = true

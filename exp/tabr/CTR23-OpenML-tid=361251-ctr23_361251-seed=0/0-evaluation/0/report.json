@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361251-ctr23_361251-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.00019407982792082253,
+            "weight_decay": 1.0924118351371678e-06
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 183,
+            "context_dropout": 0.396104122495611,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.17404656432626645,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 306160,
+    "prediction_type": null,
+    "best_epoch": 98,
+    "metrics": {
+        "train": {
+            "rmse": 0.004076454366003384,
+            "mae": 0.0027097010078199757,
+            "r2": 0.9879534244537354,
+            "corr": 0.99403705997217,
+            "score": -0.004076454366003384
+        },
+        "val": {
+            "rmse": 0.006241024399077784,
+            "mae": 0.004077584325771544,
+            "r2": 0.96979820728302,
+            "corr": 0.9848129661664501,
+            "score": -0.006241024399077784
+        },
+        "test": {
+            "rmse": 0.006040701605652217,
+            "mae": 0.004019964054278957,
+            "r2": 0.9729120135307312,
+            "corr": 0.9865795047273173,
+            "score": -0.006040701605652217
+        }
+    },
+    "time": "0:00:15.008669",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}
