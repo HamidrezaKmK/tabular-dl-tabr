@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr_scaling.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361617-ctr23_361617-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0008972612866432509,
+            "weight_decay": 1.62065673920372e-05
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 309,
+            "context_dropout": 0.023512675352592403,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.16968417754584575,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 866128,
+    "prediction_type": null,
+    "best_epoch": 28,
+    "metrics": {
+        "train": {
+            "rmse": 0.43174271346415116,
+            "mae": 0.32616144235251454,
+            "r2": 0.9981762170791626,
+            "corr": 0.9990877270624582,
+            "score": -0.43174271346415116
+        },
+        "val": {
+            "rmse": 0.37645383447606795,
+            "mae": 0.29799077081520764,
+            "r2": 0.9987313151359558,
+            "corr": 0.999365581679188,
+            "score": -0.37645383447606795
+        },
+        "test": {
+            "rmse": 0.5860324330831281,
+            "mae": 0.4006257529319086,
+            "r2": 0.9957900643348694,
+            "corr": 0.9979235770015505,
+            "score": -0.5860324330831281
+        }
+    },
+    "time": "0:00:01.163634",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}
