@@ -1,0 +1,24 @@
+seed = 0
+
+[data]
+seed = 0
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+cache = true
+path = ":data/TabZilla-OpenML-cnae-9-tid=9981-fold=0"
+
+[model]
+iterations = 4000
+early_stopping_rounds = 200
+od_pval = 0.001
+bagging_temperature = 0.9764594650133958
+depth = 8
+l2_leaf_reg = 9.769934773084337
+leaf_estimation_iterations = 7
+learning_rate = 0.16511660035531794
+task_type = "CPU"
+thread_count = 4
+
+[fit]
+logging_level = "Verbose"

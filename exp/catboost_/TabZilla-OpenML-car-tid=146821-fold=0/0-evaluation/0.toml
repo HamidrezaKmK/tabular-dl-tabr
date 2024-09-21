@@ -1,0 +1,24 @@
+seed = 0
+
+[data]
+seed = 0
+num_policy = "__null__"
+cat_policy = "__null__"
+y_policy = "__null__"
+cache = true
+path = ":data/TabZilla-OpenML-car-tid=146821-fold=0"
+
+[model]
+iterations = 4000
+early_stopping_rounds = 200
+od_pval = 0.001
+bagging_temperature = 0.08712929970154071
+depth = 3
+l2_leaf_reg = 8.342936470924586
+leaf_estimation_iterations = 8
+learning_rate = 0.407414465416623
+task_type = "CPU"
+thread_count = 4
+
+[fit]
+logging_level = "Verbose"

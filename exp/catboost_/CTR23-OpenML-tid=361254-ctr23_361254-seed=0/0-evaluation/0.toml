@@ -1,0 +1,24 @@
+seed = 0
+
+[data]
+seed = 0
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "standard"
+cache = true
+path = ":data/CTR23-OpenML-tid=361254-ctr23_361254-seed=0"
+
+[model]
+iterations = 4000
+early_stopping_rounds = 200
+od_pval = 0.001
+bagging_temperature = 0.5488135039273248
+depth = 11
+l2_leaf_reg = 6.067357423109274
+leaf_estimation_iterations = 6
+learning_rate = 0.018662266976517967
+task_type = "CPU"
+thread_count = 4
+
+[fit]
+logging_level = "Verbose"
