@@ -1,0 +1,145 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.xgboost_.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "data": {
+                "seed": 0,
+                "num_policy": "quantile",
+                "cache": true,
+                "cat_policy": null,
+                "y_policy": "standard",
+                "path": ":data/CTR23-OpenML-tid=361250-ctr23_361250-fold=1-seed=0"
+            },
+            "model": {
+                "booster": "gbtree",
+                "early_stopping_rounds": 200,
+                "n_estimators": 4000,
+                "n_jobs": 1,
+                "tree_method": "gpu_hist",
+                "use_label_encoder": false,
+                "colsample_byree": [
+                    "_tune_",
+                    "uniform",
+                    0.5,
+                    1.0
+                ],
+                "gamma": [
+                    "_tune_",
+                    "?loguniform",
+                    0,
+                    0.001,
+                    100.0
+                ],
+                "lambda": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    0.1,
+                    10.0
+                ],
+                "learning_rate": [
+                    "_tune_",
+                    "loguniform",
+                    0.001,
+                    1.0
+                ],
+                "max_depth": [
+                    "_tune_",
+                    "int",
+                    3,
+                    14
+                ],
+                "min_child_weight": [
+                    "_tune_",
+                    "loguniform",
+                    0.0001,
+                    100.0
+                ],
+                "subsample": [
+                    "_tune_",
+                    "uniform",
+                    0.5,
+                    1.0
+                ]
+            },
+            "fit": {
+                "verbose": true
+            }
+        }
+    },
+    "best": {
+        "function": "bin.xgboost_.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "data": {
+                "seed": 0,
+                "num_policy": "quantile",
+                "cache": true,
+                "cat_policy": null,
+                "y_policy": "standard",
+                "path": ":data/CTR23-OpenML-tid=361250-ctr23_361250-fold=1-seed=0"
+            },
+            "model": {
+                "booster": "gbtree",
+                "early_stopping_rounds": 200,
+                "n_estimators": 4000,
+                "n_jobs": 1,
+                "tree_method": "gpu_hist",
+                "use_label_encoder": false,
+                "colsample_byree": 0.5023477380962735,
+                "gamma": 0,
+                "lambda": 0.31441719363595283,
+                "learning_rate": 0.053514565455295114,
+                "max_depth": 10,
+                "min_child_weight": 0.2713385093212272,
+                "subsample": 0.6115408163203091
+            },
+            "fit": {
+                "verbose": true
+            },
+            "neighbors": null
+        },
+        "prediction_type": null,
+        "time": "0:00:00.663926",
+        "best_iteration": 92,
+        "metrics": {
+            "train": {
+                "rmse": 0.1289798690707828,
+                "mae": 0.09659534785887436,
+                "r2": 0.9746147394180298,
+                "corr": 0.9912021878697086,
+                "score": -0.1289798690707828
+            },
+            "val": {
+                "rmse": 0.5321559799194705,
+                "mae": 0.3831097937377326,
+                "r2": 0.5430222749710083,
+                "corr": 0.7371430465348137,
+                "score": -0.5321559799194705
+            },
+            "test": {
+                "rmse": 0.6219614150941215,
+                "mae": 0.4496561888862871,
+                "r2": 0.4239426255226135,
+                "corr": 0.6523930683050244,
+                "score": -0.6219614150941215
+            }
+        },
+        "trial_id": 10,
+        "tuning_time": "0:00:21.778996"
+    },
+    "time": "0:01:01.427120",
+    "n_completed_trials": 30
+}

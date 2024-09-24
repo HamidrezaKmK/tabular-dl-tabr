@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361242-ctr23_361242-fold=1-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.00011783263946828985,
+            "weight_decay": 4.206200696477006e-06
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 211,
+            "context_dropout": 0.12590624938507328,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.1117158035282017,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 420735,
+    "prediction_type": null,
+    "best_epoch": 59,
+    "metrics": {
+        "train": {
+            "rmse": 7.714152990243888,
+            "mae": 4.63893435293113,
+            "r2": 0.9492698311805725,
+            "corr": 0.9743516295218976,
+            "score": -7.714152990243888
+        },
+        "val": {
+            "rmse": 8.713624223607233,
+            "mae": 5.12066108685633,
+            "r2": 0.9338748455047607,
+            "corr": 0.9663891930783227,
+            "score": -8.713624223607233
+        },
+        "test": {
+            "rmse": 9.852142936544313,
+            "mae": 5.3998796698940055,
+            "r2": 0.9199504852294922,
+            "corr": 0.9593031270827421,
+            "score": -9.852142936544313
+        }
+    },
+    "time": "0:00:42.835164",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

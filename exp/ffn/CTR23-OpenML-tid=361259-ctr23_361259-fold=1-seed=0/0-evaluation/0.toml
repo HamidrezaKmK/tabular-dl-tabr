@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[data]
+seed = 0
+cache = true
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "standard"
+path = ":data/CTR23-OpenML-tid=361259-ctr23_361259-fold=1-seed=0"
+
+[optimizer]
+type = "AdamW"
+lr = 1.3196262418422203e-05
+weight_decay = 2.634905974115613e-06
+
+[model.backbone]
+type = "MLP"
+n_blocks = 1
+d_layer = 367
+dropout = 0.21930075673116017
+activation = "ReLU"
+
+[model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 96
+frequency_scale = 0.02559642090152667
+d_embedding = 26
+lite = true

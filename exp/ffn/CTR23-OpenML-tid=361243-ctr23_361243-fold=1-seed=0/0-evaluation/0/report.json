@@ -1,0 +1,70 @@
+{
+    "function": "bin.ffn.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "y_policy": "standard",
+            "path": ":data/CTR23-OpenML-tid=361243-ctr23_361243-fold=1-seed=0"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 2.1019338091154404e-05,
+            "weight_decay": 0.0
+        },
+        "model": {
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 3,
+                "d_layer": 298,
+                "dropout": 0.0,
+                "activation": "ReLU"
+            },
+            "num_embeddings": {
+                "type": "PLREmbeddings",
+                "n_frequencies": 69,
+                "frequency_scale": 0.03570522756718294,
+                "d_embedding": 25,
+                "lite": true
+            }
+        }
+    },
+    "n_parameters": 1054480,
+    "prediction_type": null,
+    "best_epoch": 234,
+    "metrics": {
+        "train": {
+            "rmse": 13.868565615741902,
+            "mae": 10.76836969126839,
+            "r2": 0.4334107041358948,
+            "corr": 0.6642961069656715,
+            "score": -13.868565615741902
+        },
+        "val": {
+            "rmse": 16.16408372631143,
+            "mae": 12.418055266969986,
+            "r2": 0.2702070474624634,
+            "corr": 0.521645477589097,
+            "score": -16.16408372631143
+        },
+        "test": {
+            "rmse": 15.901529884072621,
+            "mae": 12.146567335441205,
+            "r2": 0.20719963312149048,
+            "corr": 0.47400766026253865,
+            "score": -15.901529884072621
+        }
+    },
+    "time": "0:00:05.014998",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

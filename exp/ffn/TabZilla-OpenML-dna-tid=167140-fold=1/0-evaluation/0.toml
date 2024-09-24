@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[data]
+seed = 0
+cache = true
+num_policy = "__null__"
+cat_policy = "__null__"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-dna-tid=167140-fold=1"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00010833236250328243
+weight_decay = 6.19611408604553e-06
+
+[model.backbone]
+type = "MLP"
+n_blocks = 4
+d_layer = 240
+dropout = 0.1778063689249778
+activation = "ReLU"
+
+[model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 92
+frequency_scale = 11.515983003469735
+d_embedding = 52
+lite = true

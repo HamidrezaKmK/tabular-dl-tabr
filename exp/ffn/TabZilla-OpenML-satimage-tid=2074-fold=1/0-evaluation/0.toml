@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[data]
+seed = 0
+cache = true
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-satimage-tid=2074-fold=1"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00037179695110280977
+weight_decay = 1.3424883704781802e-06
+
+[model.backbone]
+type = "MLP"
+n_blocks = 3
+d_layer = 1003
+dropout = 0.0
+activation = "ReLU"
+
+[model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 93
+frequency_scale = 0.08449023263251551
+d_embedding = 62
+lite = true

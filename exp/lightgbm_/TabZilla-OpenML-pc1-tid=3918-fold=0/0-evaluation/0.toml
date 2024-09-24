@@ -1,0 +1,22 @@
+seed = 0
+
+[data]
+seed = 0
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+cache = true
+path = ":data/TabZilla-OpenML-pc1-tid=3918-fold=0"
+
+[model]
+n_estimators = 4000
+n_jobs = 4
+early_stopping_rounds = 200
+feature_fraction = 0.7744067519636624
+lambda_l2 = 0.0
+learning_rate = 0.0431171005868549
+num_leaves = 328
+min_sum_hessian_in_leaf = 0.750524162234955
+bagging_fraction = 0.7187936056313462
+
+[fit]

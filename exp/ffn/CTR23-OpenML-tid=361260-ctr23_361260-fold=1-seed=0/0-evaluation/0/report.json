@@ -1,0 +1,70 @@
+{
+    "function": "bin.ffn.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "y_policy": "standard",
+            "path": ":data/CTR23-OpenML-tid=361260-ctr23_361260-fold=1-seed=0"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0005147622432383661,
+            "weight_decay": 2.883906161101796e-05
+        },
+        "model": {
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 2,
+                "d_layer": 564,
+                "dropout": 0.009260897230306986,
+                "activation": "ReLU"
+            },
+            "num_embeddings": {
+                "type": "PLREmbeddings",
+                "n_frequencies": 80,
+                "frequency_scale": 0.07865000457856676,
+                "d_embedding": 32,
+                "lite": true
+            }
+        }
+    },
+    "n_parameters": 596861,
+    "prediction_type": null,
+    "best_epoch": 56,
+    "metrics": {
+        "train": {
+            "rmse": 45535.262744874875,
+            "mae": 29421.89867253648,
+            "r2": 0.9795837998390198,
+            "corr": 0.9897606002462253,
+            "score": -45535.262744874875
+        },
+        "val": {
+            "rmse": 78114.04794431238,
+            "mae": 40082.409568328876,
+            "r2": 0.939664363861084,
+            "corr": 0.9693661006990695,
+            "score": -78114.04794431238
+        },
+        "test": {
+            "rmse": 88421.32421714002,
+            "mae": 42494.91274412954,
+            "r2": 0.9156779646873474,
+            "corr": 0.9570718899076677,
+            "score": -88421.32421714002
+        }
+    },
+    "time": "0:00:03.967155",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

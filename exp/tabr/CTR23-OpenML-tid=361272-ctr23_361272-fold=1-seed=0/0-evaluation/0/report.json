@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361272-ctr23_361272-fold=1-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0005783708472141561,
+            "weight_decay": 2.4269631383790863e-05
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 305,
+            "context_dropout": 0.30079462915602134,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.5736501808339343,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 898226,
+    "prediction_type": null,
+    "best_epoch": 9,
+    "metrics": {
+        "train": {
+            "rmse": 8050.982051789761,
+            "mae": 3852.5567551129498,
+            "r2": 0.8276600241661072,
+            "corr": 0.9100839736706606,
+            "score": -8050.982051789761
+        },
+        "val": {
+            "rmse": 8731.654580676597,
+            "mae": 3768.7160112082493,
+            "r2": 0.8040961027145386,
+            "corr": 0.8972385982912223,
+            "score": -8731.654580676597
+        },
+        "test": {
+            "rmse": 11580.332383850446,
+            "mae": 4404.441491269972,
+            "r2": 0.652595043182373,
+            "corr": 0.8176113667228677,
+            "score": -11580.332383850446
+        }
+    },
+    "time": "0:00:13.354267",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

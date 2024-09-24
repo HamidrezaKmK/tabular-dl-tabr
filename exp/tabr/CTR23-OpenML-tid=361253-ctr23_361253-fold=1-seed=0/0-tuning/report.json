@@ -1,0 +1,144 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.tabr.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/CTR23-OpenML-tid=361253-ctr23_361253-fold=1-seed=0",
+                "y_policy": "standard"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": [
+                    "_tune_",
+                    "int",
+                    96,
+                    384
+                ],
+                "context_dropout": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            }
+        }
+    },
+    "best": {
+        "function": "bin.tabr.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "path": ":data/CTR23-OpenML-tid=361253-ctr23_361253-fold=1-seed=0",
+                "y_policy": "standard"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.0008401891913442231,
+                "weight_decay": 1.5278610607077096e-05
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": 261,
+                "context_dropout": 0.13384897958437098,
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": 0.571649406910191,
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            }
+        },
+        "n_parameters": 629272,
+        "prediction_type": null,
+        "best_epoch": 246,
+        "metrics": {
+            "train": {
+                "rmse": 1527.7930281269266,
+                "mae": 1186.4665324307134,
+                "r2": 0.9998139142990112,
+                "corr": 0.9999161988928938,
+                "score": -1527.7930281269266
+            },
+            "val": {
+                "rmse": 1649.8135024309397,
+                "mae": 1262.3793314107024,
+                "r2": 0.9997873306274414,
+                "corr": 0.999902252106679,
+                "score": -1649.8135024309397
+            },
+            "test": {
+                "rmse": 1721.19695453041,
+                "mae": 1309.552631782135,
+                "r2": 0.9997627139091492,
+                "corr": 0.999890343808086,
+                "score": -1721.19695453041
+            }
+        },
+        "time": "0:07:57.346151",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 16,
+        "tuning_time": "3:27:39.536596"
+    },
+    "time": "6:29:24.453226",
+    "n_completed_trials": 30
+}

@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[data]
+seed = 0
+cache = true
+num_policy = "__null__"
+cat_policy = "ordinal"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-connect-4-tid=146195-fold=1"
+
+[optimizer]
+type = "AdamW"
+lr = 7.838821177219166e-05
+weight_decay = 0.0
+
+[model.backbone]
+type = "MLP"
+n_blocks = 2
+d_layer = 846
+dropout = 0.29063643631792935
+activation = "ReLU"
+
+[model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 87
+frequency_scale = 5.8901500750508715
+d_embedding = 51
+lite = true

@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361244-ctr23_361244-fold=1-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0008972612866432509,
+            "weight_decay": 1.62065673920372e-05
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 309,
+            "context_dropout": 0.023512675352592403,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.16968417754584575,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 871381,
+    "prediction_type": null,
+    "best_epoch": 23,
+    "metrics": {
+        "train": {
+            "rmse": 0.5850680657352539,
+            "mae": 0.3315768761110576,
+            "r2": 0.5119943618774414,
+            "corr": 0.7204514176805072,
+            "score": -0.5850680657352539
+        },
+        "val": {
+            "rmse": 0.7338169952844372,
+            "mae": 0.3788491193138839,
+            "r2": 0.23819243907928467,
+            "corr": 0.48849342236604665,
+            "score": -0.7338169952844372
+        },
+        "test": {
+            "rmse": 0.6954536633652258,
+            "mae": 0.3444181585512922,
+            "r2": 0.24579459428787231,
+            "corr": 0.5066315690637677,
+            "score": -0.6954536633652258
+        }
+    },
+    "time": "0:00:02.685301",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

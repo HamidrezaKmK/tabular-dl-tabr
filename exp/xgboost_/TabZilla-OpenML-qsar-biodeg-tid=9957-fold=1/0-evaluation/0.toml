@@ -1,0 +1,28 @@
+seed = 0
+neighbors = "__null__"
+
+[data]
+seed = 0
+num_policy = "quantile"
+cache = true
+cat_policy = "__null__"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-qsar-biodeg-tid=9957-fold=1"
+
+[model]
+booster = "gbtree"
+early_stopping_rounds = 200
+n_estimators = 4000
+n_jobs = 1
+tree_method = "gpu_hist"
+use_label_encoder = false
+colsample_byree = 0.5794847918227599
+gamma = 0.004908115302826748
+lambda = 4.385170256085128
+learning_rate = 0.001955707167338674
+max_depth = 13
+min_child_weight = 0.0003772162969353184
+subsample = 0.9882297325066979
+
+[fit]
+verbose = true

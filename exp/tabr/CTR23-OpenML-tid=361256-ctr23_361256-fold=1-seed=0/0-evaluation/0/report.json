@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361256-ctr23_361256-fold=1-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0007098936257405903,
+            "weight_decay": 1.097581541938016e-06
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 336,
+            "context_dropout": 0.4668940505699103,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.5220072889480915,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 1027825,
+    "prediction_type": null,
+    "best_epoch": 40,
+    "metrics": {
+        "train": {
+            "rmse": 1.8140337216187477,
+            "mae": 1.332130893503063,
+            "r2": 0.9896926283836365,
+            "corr": 0.9948508188466015,
+            "score": -1.8140337216187477
+        },
+        "val": {
+            "rmse": 2.034900431627137,
+            "mae": 1.4640331765252768,
+            "r2": 0.9891315698623657,
+            "corr": 0.9945878851058159,
+            "score": -2.034900431627137
+        },
+        "test": {
+            "rmse": 2.314781550640787,
+            "mae": 1.6660592848361944,
+            "r2": 0.9871780276298523,
+            "corr": 0.9936259060253685,
+            "score": -2.314781550640787
+        }
+    },
+    "time": "0:00:09.702545",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

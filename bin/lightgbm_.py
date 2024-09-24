@@ -36,7 +36,7 @@ class Config:
         assert 'random_state' not in self.model
         if isinstance(self.data, dict):
             assert self.data['cat_policy'] in [None, 'one-hot']
-        assert 'early_stopping_rounds' in self.fit
+        assert 'early_stopping_rounds' in self.model
         assert 'device' not in self.model, 'Use "device_type" argument instead.'
         if self.model.get('device_type') == 'gpu':
             # In fact, in our environment, LightGBM does not support GPU.

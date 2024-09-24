@@ -1,0 +1,28 @@
+seed = 0
+neighbors = "__null__"
+
+[data]
+seed = 0
+num_policy = "quantile"
+cache = true
+cat_policy = "__null__"
+y_policy = "__null__"
+path = ":data/TabZilla-OpenML-balance-scale-tid=11-fold=1"
+
+[model]
+booster = "gbtree"
+early_stopping_rounds = 200
+n_estimators = 4000
+n_jobs = 1
+tree_method = "gpu_hist"
+use_label_encoder = false
+colsample_byree = 0.7343256008238508
+gamma = 0
+lambda = 0.0
+learning_rate = 0.007053763390632225
+max_depth = 4
+min_child_weight = 0.005981928050749343
+subsample = 0.559363859477122
+
+[fit]
+verbose = true

@@ -1,0 +1,70 @@
+{
+    "function": "bin.ffn.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "y_policy": "standard",
+            "path": ":data/CTR23-OpenML-tid=361242-ctr23_361242-fold=1-seed=0"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 8.17147891511587e-05,
+            "weight_decay": 0.0
+        },
+        "model": {
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 4,
+                "d_layer": 652,
+                "dropout": 0.3409101495517417,
+                "activation": "ReLU"
+            },
+            "num_embeddings": {
+                "type": "PLREmbeddings",
+                "n_frequencies": 45,
+                "frequency_scale": 0.559922365406335,
+                "d_embedding": 50,
+                "lite": true
+            }
+        }
+    },
+    "n_parameters": 3927368,
+    "prediction_type": null,
+    "best_epoch": 85,
+    "metrics": {
+        "train": {
+            "rmse": 6.3958946803293415,
+            "mae": 4.044305379816109,
+            "r2": 0.9651267528533936,
+            "corr": 0.9832066446803941,
+            "score": -6.3958946803293415
+        },
+        "val": {
+            "rmse": 8.776516629395465,
+            "mae": 5.433242305433851,
+            "r2": 0.9329168796539307,
+            "corr": 0.9663367092205237,
+            "score": -8.776516629395465
+        },
+        "test": {
+            "rmse": 9.617876758247213,
+            "mae": 5.673376625496928,
+            "r2": 0.9237120747566223,
+            "corr": 0.9616051755340109,
+            "score": -9.617876758247213
+        }
+    },
+    "time": "0:00:11.465662",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

@@ -1,0 +1,31 @@
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+context_size = 96
+
+[data]
+seed = 0
+cache = true
+num_policy = "quantile"
+cat_policy = "__null__"
+path = ":data/TabZilla-OpenML-jungle_chess_2pcs_raw_endgame_complete-tid=167119-fold=1"
+y_policy = "__null__"
+
+[optimizer]
+type = "AdamW"
+lr = 0.00024823187419258655
+weight_decay = 5.404613626296217e-05
+
+[model]
+num_embeddings = "__null__"
+d_main = 377
+context_dropout = 0.5134820054355665
+d_multiplier = 2.0
+encoder_n_blocks = 0
+predictor_n_blocks = 1
+mixer_normalization = "auto"
+dropout0 = 0.007028450511001183
+dropout1 = 0.0
+normalization = "LayerNorm"
+activation = "ReLU"

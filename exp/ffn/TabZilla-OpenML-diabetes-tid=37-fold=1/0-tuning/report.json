@@ -1,0 +1,242 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.ffn.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": null,
+                "path": ":data/TabZilla-OpenML-diabetes-tid=37-fold=1"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            },
+            "model": {
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": [
+                        "_tune_",
+                        "int",
+                        1,
+                        6
+                    ],
+                    "d_layer": [
+                        "_tune_",
+                        "int",
+                        64,
+                        1024
+                    ],
+                    "dropout": [
+                        "_tune_",
+                        "?uniform",
+                        0.0,
+                        0.0,
+                        0.5
+                    ],
+                    "activation": "ReLU"
+                },
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": [
+                        "_tune_",
+                        "int",
+                        16,
+                        96
+                    ],
+                    "frequency_scale": [
+                        "_tune_",
+                        "loguniform",
+                        0.01,
+                        100.0
+                    ],
+                    "d_embedding": [
+                        "_tune_",
+                        "int",
+                        16,
+                        64
+                    ],
+                    "lite": true
+                }
+            }
+        }
+    },
+    "best": {
+        "function": "bin.ffn.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": null,
+                "path": ":data/TabZilla-OpenML-diabetes-tid=37-fold=1"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.0009197266687466414,
+                "weight_decay": 1.9008376820188854e-05
+            },
+            "model": {
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 3,
+                    "d_layer": 195,
+                    "dropout": 0.0,
+                    "activation": "ReLU"
+                },
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": 57,
+                    "frequency_scale": 0.07893472784033653,
+                    "d_embedding": 20,
+                    "lite": true
+                }
+            }
+        },
+        "n_parameters": 110787,
+        "prediction_type": "logits",
+        "best_epoch": 21,
+        "metrics": {
+            "train": {
+                "0": {
+                    "precision": 0.8411910669975186,
+                    "recall": 0.8475,
+                    "f1-score": 0.8443337484433375,
+                    "support": 400.0
+                },
+                "1": {
+                    "precision": 0.7109004739336493,
+                    "recall": 0.7009345794392523,
+                    "f1-score": 0.7058823529411765,
+                    "support": 214.0
+                },
+                "accuracy": 0.7964169381107492,
+                "macro avg": {
+                    "precision": 0.7760457704655839,
+                    "recall": 0.7742172897196262,
+                    "f1-score": 0.775108050692257,
+                    "support": 614.0
+                },
+                "weighted avg": {
+                    "precision": 0.7957803391218378,
+                    "recall": 0.7964169381107492,
+                    "f1-score": 0.7960787018025192,
+                    "support": 614.0
+                },
+                "cross-entropy": 0.4256316725750297,
+                "roc-auc": 0.8717289719626169,
+                "f1-weighted": 0.7960787018025192,
+                "f1-macro": 0.775108050692257,
+                "f1-micro": 0.7964169381107492,
+                "score": 0.7964169381107492
+            },
+            "val": {
+                "0": {
+                    "precision": 0.9130434782608695,
+                    "recall": 0.84,
+                    "f1-score": 0.875,
+                    "support": 50.0
+                },
+                "1": {
+                    "precision": 0.7419354838709677,
+                    "recall": 0.8518518518518519,
+                    "f1-score": 0.7931034482758621,
+                    "support": 27.0
+                },
+                "accuracy": 0.8441558441558441,
+                "macro avg": {
+                    "precision": 0.8274894810659186,
+                    "recall": 0.845925925925926,
+                    "f1-score": 0.834051724137931,
+                    "support": 77.0
+                },
+                "weighted avg": {
+                    "precision": 0.8530445711371376,
+                    "recall": 0.8441558441558441,
+                    "f1-score": 0.8462830273175102,
+                    "support": 77.0
+                },
+                "cross-entropy": 0.42246423332280403,
+                "roc-auc": 0.8837037037037037,
+                "f1-weighted": 0.8462830273175102,
+                "f1-macro": 0.834051724137931,
+                "f1-micro": 0.8441558441558441,
+                "score": 0.8441558441558441
+            },
+            "test": {
+                "0": {
+                    "precision": 0.7547169811320755,
+                    "recall": 0.8,
+                    "f1-score": 0.7766990291262136,
+                    "support": 50.0
+                },
+                "1": {
+                    "precision": 0.5833333333333334,
+                    "recall": 0.5185185185185185,
+                    "f1-score": 0.5490196078431373,
+                    "support": 27.0
+                },
+                "accuracy": 0.7012987012987013,
+                "macro avg": {
+                    "precision": 0.6690251572327044,
+                    "recall": 0.6592592592592592,
+                    "f1-score": 0.6628593184846754,
+                    "support": 77.0
+                },
+                "weighted avg": {
+                    "precision": 0.6946214163195296,
+                    "recall": 0.7012987012987013,
+                    "f1-score": 0.6968633878970829,
+                    "support": 77.0
+                },
+                "cross-entropy": 0.5740444616373523,
+                "roc-auc": 0.782962962962963,
+                "f1-weighted": 0.6968633878970829,
+                "f1-macro": 0.6628593184846754,
+                "f1-micro": 0.7012987012987013,
+                "score": 0.7012987012987013
+            }
+        },
+        "time": "0:00:00.875403",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 26,
+        "tuning_time": "0:00:21.735813"
+    },
+    "time": "0:00:24.634191",
+    "n_completed_trials": 30
+}

@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361251-ctr23_361251-fold=1-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.00014081551171078602,
+            "weight_decay": 0.0
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 220,
+            "context_dropout": 0.5379279575106378,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.2205371220287379,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 441321,
+    "prediction_type": null,
+    "best_epoch": 124,
+    "metrics": {
+        "train": {
+            "rmse": 0.0038852752348565544,
+            "mae": 0.002624995774077765,
+            "r2": 0.9890039563179016,
+            "corr": 0.9944871389221606,
+            "score": -0.0038852752348565544
+        },
+        "val": {
+            "rmse": 0.006186550687635831,
+            "mae": 0.004003646777496206,
+            "r2": 0.9708425998687744,
+            "corr": 0.9853975746102852,
+            "score": -0.006186550687635831
+        },
+        "test": {
+            "rmse": 0.006188588030683992,
+            "mae": 0.003984276082986127,
+            "r2": 0.9717106819152832,
+            "corr": 0.9859949120505727,
+            "score": -0.006188588030683992
+        }
+    },
+    "time": "0:00:24.638744",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

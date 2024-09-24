@@ -1,0 +1,242 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.ffn.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": "ordinal",
+                "y_policy": null,
+                "path": ":data/TabZilla-OpenML-dresses-sales-tid=125920-fold=1"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    1e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            },
+            "model": {
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": [
+                        "_tune_",
+                        "int",
+                        1,
+                        6
+                    ],
+                    "d_layer": [
+                        "_tune_",
+                        "int",
+                        64,
+                        1024
+                    ],
+                    "dropout": [
+                        "_tune_",
+                        "?uniform",
+                        0.0,
+                        0.0,
+                        0.5
+                    ],
+                    "activation": "ReLU"
+                },
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": [
+                        "_tune_",
+                        "int",
+                        16,
+                        96
+                    ],
+                    "frequency_scale": [
+                        "_tune_",
+                        "loguniform",
+                        0.01,
+                        100.0
+                    ],
+                    "d_embedding": [
+                        "_tune_",
+                        "int",
+                        16,
+                        64
+                    ],
+                    "lite": true
+                }
+            }
+        }
+    },
+    "best": {
+        "function": "bin.ffn.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "num_policy": "quantile",
+                "cat_policy": "ordinal",
+                "y_policy": null,
+                "path": ":data/TabZilla-OpenML-dresses-sales-tid=125920-fold=1"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.0005147622432383661,
+                "weight_decay": 2.883906161101796e-05
+            },
+            "model": {
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 2,
+                    "d_layer": 564,
+                    "dropout": 0.009260897230306986,
+                    "activation": "ReLU"
+                },
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": 80,
+                    "frequency_scale": 0.07865000457856676,
+                    "d_embedding": 32,
+                    "lite": true
+                }
+            }
+        },
+        "n_parameters": 435565,
+        "prediction_type": "logits",
+        "best_epoch": 13,
+        "metrics": {
+            "train": {
+                "0": {
+                    "precision": 0.7426470588235294,
+                    "recall": 0.8706896551724138,
+                    "f1-score": 0.8015873015873016,
+                    "support": 232.0
+                },
+                "1": {
+                    "precision": 0.765625,
+                    "recall": 0.5833333333333334,
+                    "f1-score": 0.6621621621621622,
+                    "support": 168.0
+                },
+                "accuracy": 0.75,
+                "macro avg": {
+                    "precision": 0.7541360294117647,
+                    "recall": 0.7270114942528736,
+                    "f1-score": 0.7318747318747318,
+                    "support": 400.0
+                },
+                "weighted avg": {
+                    "precision": 0.7522977941176471,
+                    "recall": 0.75,
+                    "f1-score": 0.743028743028743,
+                    "support": 400.0
+                },
+                "cross-entropy": 0.516313471853982,
+                "roc-auc": 0.8389778325123153,
+                "f1-weighted": 0.743028743028743,
+                "f1-macro": 0.7318747318747318,
+                "f1-micro": 0.75,
+                "score": 0.75
+            },
+            "val": {
+                "0": {
+                    "precision": 0.6578947368421053,
+                    "recall": 0.8620689655172413,
+                    "f1-score": 0.746268656716418,
+                    "support": 29.0
+                },
+                "1": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.38095238095238093,
+                    "f1-score": 0.48484848484848486,
+                    "support": 21.0
+                },
+                "accuracy": 0.66,
+                "macro avg": {
+                    "precision": 0.6622807017543859,
+                    "recall": 0.6215106732348111,
+                    "f1-score": 0.6155585707824514,
+                    "support": 50.0
+                },
+                "weighted avg": {
+                    "precision": 0.661578947368421,
+                    "recall": 0.66,
+                    "f1-score": 0.636472184531886,
+                    "support": 50.0
+                },
+                "cross-entropy": 0.6458288471721154,
+                "roc-auc": 0.6896551724137931,
+                "f1-weighted": 0.636472184531886,
+                "f1-macro": 0.6155585707824514,
+                "f1-micro": 0.66,
+                "score": 0.66
+            },
+            "test": {
+                "0": {
+                    "precision": 0.7352941176470589,
+                    "recall": 0.8620689655172413,
+                    "f1-score": 0.7936507936507936,
+                    "support": 29.0
+                },
+                "1": {
+                    "precision": 0.75,
+                    "recall": 0.5714285714285714,
+                    "f1-score": 0.6486486486486487,
+                    "support": 21.0
+                },
+                "accuracy": 0.74,
+                "macro avg": {
+                    "precision": 0.7426470588235294,
+                    "recall": 0.7167487684729064,
+                    "f1-score": 0.7211497211497211,
+                    "support": 50.0
+                },
+                "weighted avg": {
+                    "precision": 0.7414705882352942,
+                    "recall": 0.74,
+                    "f1-score": 0.7327498927498928,
+                    "support": 50.0
+                },
+                "cross-entropy": 0.6003450181139504,
+                "roc-auc": 0.7257799671592775,
+                "f1-weighted": 0.7327498927498928,
+                "f1-macro": 0.7211497211497211,
+                "f1-micro": 0.74,
+                "score": 0.74
+            }
+        },
+        "time": "0:00:01.569361",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 15,
+        "tuning_time": "0:00:21.261075"
+    },
+    "time": "0:00:40.778529",
+    "n_completed_trials": 30
+}

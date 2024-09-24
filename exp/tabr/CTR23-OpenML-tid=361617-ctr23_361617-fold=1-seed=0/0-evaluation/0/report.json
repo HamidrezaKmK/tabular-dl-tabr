@@ -1,0 +1,68 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "context_size": 96,
+        "data": {
+            "seed": 0,
+            "cache": true,
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "path": ":data/CTR23-OpenML-tid=361617-ctr23_361617-fold=1-seed=0",
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0007717846862118063,
+            "weight_decay": 0.0
+        },
+        "model": {
+            "num_embeddings": null,
+            "d_main": 222,
+            "context_dropout": 0.4185787175563589,
+            "d_multiplier": 2.0,
+            "encoder_n_blocks": 0,
+            "predictor_n_blocks": 1,
+            "mixer_normalization": "auto",
+            "dropout0": 0.0361352829775619,
+            "dropout1": 0.0,
+            "normalization": "LayerNorm",
+            "activation": "ReLU"
+        }
+    },
+    "n_parameters": 448441,
+    "prediction_type": null,
+    "best_epoch": 79,
+    "metrics": {
+        "train": {
+            "rmse": 0.35309799426554483,
+            "mae": 0.2621531148586058,
+            "r2": 0.9987429976463318,
+            "corr": 0.9993933546207071,
+            "score": -0.35309799426554483
+        },
+        "val": {
+            "rmse": 0.4106002271828555,
+            "mae": 0.31585048373045055,
+            "r2": 0.9984105229377747,
+            "corr": 0.9992099907160877,
+            "score": -0.4106002271828555
+        },
+        "test": {
+            "rmse": 0.4929055724842964,
+            "mae": 0.37816235098387097,
+            "r2": 0.9978225231170654,
+            "corr": 0.9989284930399642,
+            "score": -0.4929055724842964
+        }
+    },
+    "time": "0:00:01.983102",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}
