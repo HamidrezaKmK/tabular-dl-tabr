@@ -28,7 +28,7 @@
         "fit": {}
     },
     "prediction_type": null,
-    "time": "0:00:00.170381",
+    "time": "0:00:00.180561",
     "best_iteration": 40,
     "metrics": {
         "train": {

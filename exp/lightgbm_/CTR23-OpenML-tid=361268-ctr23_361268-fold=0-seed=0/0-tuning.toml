@@ -1,0 +1,30 @@
+seed = 0
+n_trials = 30
+timeout = "__null__"
+function = "bin.lightgbm_.main"
+
+[sampler]
+
+[space]
+seed = 0
+
+[space.data]
+seed = 0
+num_policy = "quantile"
+cat_policy = "one-hot"
+y_policy = "standard"
+cache = true
+path = ":data/CTR23-OpenML-tid=361268-ctr23_361268-fold=0-seed=0"
+
+[space.model]
+n_estimators = 4000
+n_jobs = 4
+early_stopping_rounds = 200
+feature_fraction = [ "_tune_", "uniform", 0.5, 1.0,]
+lambda_l2 = [ "_tune_", "?loguniform", 0.0, 0.1, 10.0,]
+learning_rate = [ "_tune_", "loguniform", 0.001, 1.0,]
+num_leaves = [ "_tune_", "int", 4, 768,]
+min_sum_hessian_in_leaf = [ "_tune_", "loguniform", 0.0001, 100.0,]
+bagging_fraction = [ "_tune_", "uniform", 0.5, 1.0,]
+
+[space.fit]

@@ -1,0 +1,22 @@
+seed = 0
+
+[data]
+seed = 0
+num_policy = "quantile"
+cat_policy = "one-hot"
+y_policy = "standard"
+cache = true
+path = ":data/CTR23-OpenML-tid=361619-ctr23_361619-fold=0-seed=0"
+
+[model]
+n_estimators = 4000
+n_jobs = 4
+early_stopping_rounds = 200
+feature_fraction = 0.9883805440951685
+lambda_l2 = 0.11977759384712287
+learning_rate = 0.007053763390632225
+num_leaves = 95
+min_sum_hessian_in_leaf = 0.005981928050749343
+bagging_fraction = 0.559363859477122
+
+[fit]

@@ -1,0 +1,56 @@
+{
+    "function": "bin.lightgbm_.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation",
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "data": {
+            "seed": 0,
+            "num_policy": "quantile",
+            "cat_policy": "one-hot",
+            "y_policy": "standard",
+            "cache": true,
+            "path": ":data/CTR23-OpenML-tid=361616-ctr23_361616-fold=1-seed=0"
+        },
+        "model": {
+            "n_estimators": 4000,
+            "n_jobs": 4,
+            "early_stopping_rounds": 200,
+            "feature_fraction": 0.8333833577228338,
+            "lambda_l2": 0.0,
+            "learning_rate": 0.0024365700014642,
+            "num_leaves": 245,
+            "min_sum_hessian_in_leaf": 0.015214743167796887,
+            "bagging_fraction": 0.7850983852089398
+        },
+        "fit": {}
+    },
+    "prediction_type": null,
+    "time": "0:00:01.373090",
+    "best_iteration": 2715,
+    "metrics": {
+        "train": {
+            "rmse": 11.309764928379028,
+            "mae": 8.825521171776401,
+            "r2": 0.9845656760022184,
+            "corr": 0.9923327231627322,
+            "score": -11.309764928379028
+        },
+        "val": {
+            "rmse": 23.452853588977415,
+            "mae": 18.318995290872227,
+            "r2": 0.9380200940665749,
+            "corr": 0.9686765004532663,
+            "score": -23.452853588977415
+        },
+        "test": {
+            "rmse": 25.066456616849226,
+            "mae": 19.987540724577606,
+            "r2": 0.9208943064332391,
+            "corr": 0.9602628914032825,
+            "score": -25.066456616849226
+        }
+    }
+}

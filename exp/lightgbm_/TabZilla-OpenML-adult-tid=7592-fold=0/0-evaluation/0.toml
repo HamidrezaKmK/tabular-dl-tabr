@@ -9,14 +9,14 @@ cache = true
 path = ":data/TabZilla-OpenML-adult-tid=7592-fold=0"
 
 [model]
-n_estimators = 4000
-n_jobs = 4
-early_stopping_rounds = 200
-feature_fraction = 0.7267713413390344
-lambda_l2 = 8.93393955906384
-learning_rate = 0.3693261231099635
-num_leaves = 12
-min_sum_hessian_in_leaf = 0.014450017959683438
-bagging_fraction = 0.864995281212029
+n_estimators = 100
+n_jobs = -1
+early_stopping_rounds = 10
+feature_fraction = 0.5469702553792208
+lambda_l2 = 0.43364855632427685
+learning_rate = 0.10051506084660809
+num_leaves = 104
+min_sum_hessian_in_leaf = 1.9859267454728535
+bagging_fraction = 0.6447030464736005
 
 [fit]

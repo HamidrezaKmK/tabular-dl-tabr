@@ -9,16 +9,16 @@ cache = true
 path = ":data/TabZilla-OpenML-Bioresponse-tid=9910-fold=0"
 
 [model]
-iterations = 4000
+iterations = 100
 early_stopping_rounds = 200
 od_pval = 0.001
-bagging_temperature = 0.359507900573786
-depth = 8
-l2_leaf_reg = 7.006548839679922
-leaf_estimation_iterations = 1
-learning_rate = 0.10006913513545575
+bagging_temperature = 0.2653894909394454
+depth = 9
+l2_leaf_reg = 1.0300110565085727
+leaf_estimation_iterations = 6
+learning_rate = 0.6136045802294308
 task_type = "CPU"
-thread_count = 4
+thread_count = -1
 
 [fit]
 logging_level = "Verbose"

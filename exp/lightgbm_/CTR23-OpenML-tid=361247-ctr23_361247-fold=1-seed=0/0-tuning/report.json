@@ -1,0 +1,128 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA RTX 6000 Ada Generation",
+        "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "config": {
+        "seed": 0,
+        "n_trials": 30,
+        "timeout": null,
+        "function": "bin.lightgbm_.main",
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "data": {
+                "seed": 0,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": "standard",
+                "cache": true,
+                "path": ":data/CTR23-OpenML-tid=361247-ctr23_361247-fold=1-seed=0"
+            },
+            "model": {
+                "n_estimators": 4000,
+                "n_jobs": 4,
+                "early_stopping_rounds": 200,
+                "feature_fraction": [
+                    "_tune_",
+                    "uniform",
+                    0.5,
+                    1.0
+                ],
+                "lambda_l2": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    0.1,
+                    10.0
+                ],
+                "learning_rate": [
+                    "_tune_",
+                    "loguniform",
+                    0.001,
+                    1.0
+                ],
+                "num_leaves": [
+                    "_tune_",
+                    "int",
+                    4,
+                    768
+                ],
+                "min_sum_hessian_in_leaf": [
+                    "_tune_",
+                    "loguniform",
+                    0.0001,
+                    100.0
+                ],
+                "bagging_fraction": [
+                    "_tune_",
+                    "uniform",
+                    0.5,
+                    1.0
+                ]
+            },
+            "fit": {}
+        }
+    },
+    "best": {
+        "function": "bin.lightgbm_.main",
+        "gpus": [
+            "NVIDIA RTX 6000 Ada Generation",
+            "NVIDIA RTX 6000 Ada Generation"
+        ],
+        "config": {
+            "seed": 0,
+            "data": {
+                "seed": 0,
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": "standard",
+                "cache": true,
+                "path": ":data/CTR23-OpenML-tid=361247-ctr23_361247-fold=1-seed=0"
+            },
+            "model": {
+                "n_estimators": 4000,
+                "n_jobs": 4,
+                "early_stopping_rounds": 200,
+                "feature_fraction": 0.7073309699952618,
+                "lambda_l2": 0.8171478915115865,
+                "learning_rate": 0.05073432032394333,
+                "num_leaves": 18,
+                "min_sum_hessian_in_leaf": 0.5079406641139773,
+                "bagging_fraction": 0.8060478613612108
+            },
+            "fit": {}
+        },
+        "prediction_type": null,
+        "time": "0:00:01.345567",
+        "best_iteration": 4000,
+        "metrics": {
+            "train": {
+                "rmse": 0.00037078756516119174,
+                "mae": 0.00028749341679455747,
+                "r2": 0.9993612270265305,
+                "corr": 0.9996805710770911,
+                "score": -0.00037078756516119174
+            },
+            "val": {
+                "rmse": 0.0007574216170557364,
+                "mae": 0.0005282946903611283,
+                "r2": 0.9974190268808819,
+                "corr": 0.9987088837582384,
+                "score": -0.0007574216170557364
+            },
+            "test": {
+                "rmse": 0.0007696764463770215,
+                "mae": 0.0005344358533099118,
+                "r2": 0.9972894184306501,
+                "corr": 0.998647245874099,
+                "score": -0.0007696764463770215
+            }
+        },
+        "trial_id": 4,
+        "tuning_time": "0:00:23.378013"
+    },
+    "time": "0:04:18.405992",
+    "n_completed_trials": 30
+}

@@ -95,7 +95,7 @@
             "fit": {}
         },
         "prediction_type": null,
-        "time": "0:00:00.172828",
+        "time": "0:00:00.270224",
         "best_iteration": 40,
         "metrics": {
             "train": {
@@ -121,8 +121,8 @@
             }
         },
         "trial_id": 3,
-        "tuning_time": "0:00:01.313459"
+        "tuning_time": "0:00:02.674318"
     },
-    "time": "0:00:17.164405",
+    "time": "0:00:19.602690",
     "n_completed_trials": 30
 }

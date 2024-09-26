@@ -17,9 +17,9 @@ cache = true
 path = ":data/TabZilla-OpenML-adult-tid=7592-fold=0"
 
 [space.model]
-n_estimators = 4000
-n_jobs = 4
-early_stopping_rounds = 200
+n_estimators = 100
+n_jobs = -1
+early_stopping_rounds = 10
 feature_fraction = [ "_tune_", "uniform", 0.5, 1.0,]
 lambda_l2 = [ "_tune_", "?loguniform", 0.0, 0.1, 10.0,]
 learning_rate = [ "_tune_", "loguniform", 0.001, 1.0,]
